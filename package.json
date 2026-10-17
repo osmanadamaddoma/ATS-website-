@@ -4,6 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "build": "rm -rf dist && mkdir -p dist && cp index.html styles.css app.js server.js package.json dist/ && cp -r public/* dist/"
+    "build": "rm -rf dist && mkdir -p dist/docintel && cp index.html styles.css app.js server.js package.json dist/ && cp docintel/index.html dist/docintel/index.html && cp -r public/* dist/"
   }
 }
