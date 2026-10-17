@@ -1,104 +1,524 @@
-ATS-website-
-Repository navigation
-Code
-Issues
-Pull requests
-osmanadamaddoma
-ATS-website-
-Public
-About
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ATS DocIntel GenAI | AI Document Intelligence | Omdurman / GCC</title>
+  <meta name="description" content="ATS DocIntel GenAI is an AI document intelligence application for extracting, understanding and working with business documents from Omdurman to the GCC.">
+  <meta name="keywords" content="ATS DocIntel GenAI, AI document intelligence, document analysis, generative AI Sudan, Omdurman GCC, ATS ENG">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://ats-website-pages.pages.dev/docintel/">
 
-Bilingual Website for ADDOMA TRADING SERVICES (ATS)
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ATS DocIntel GenAI | AI Document Intelligence">
+  <meta property="og:description" content="Turn complex documents into clearer insights with ATS DocIntel GenAI.">
+  <meta property="og:url" content="https://ats-website-pages.pages.dev/docintel/">
+  <meta property="og:site_name" content="ATS ENG — Industrial Generators & Cold Rooms — Omdurman / GCC">
+  <meta property="og:image" content="https://ats-website-pages.pages.dev/logo-ats.jpg">
 
-Resources
-Readme
-Activity
-Stars
-0 stars
-Watchers
-0 watching
-Forks
-0 forks
-osmanadamaddoma
-osmanadamaddoma
-2 hours ago
-Name	
-public
-11 hours ago
-README.md
-2 days ago
-TODO.md
-19 hours ago
-app.config.ts
-2 days ago
-app.js
-19 hours ago
-index.html
-2 hours ago
-manus-routes.json
-2 hours ago
-package.json
-2 days ago
-robots.txt
-2 hours ago
-server.js
-2 days ago
-Repository files navigation
-README
-ADDOMA TRADING SERVICES (ATS)
-موقع تعريفي ثنائي اللغة (English / العربية) لشركة ADDOMA TRADING SERVICES، مبني كواجهة ثابتة سريعة ومهيأة للنشر على Cloudflare Pages.
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ATS DocIntel GenAI | AI Document Intelligence">
+  <meta name="twitter:description" content="AI-assisted document intelligence by ATS ENG.">
+  <meta name="twitter:image" content="https://ats-website-pages.pages.dev/logo-ats.jpg">
 
-التشغيل المحلي
-npm start
-ثم افتح http://localhost:3000.
+  <link rel="icon" href="/logo-ats.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-بناء نسخة النشر
-npm run build
-الناتج الجاهز للنشر يوجد داخل مجلد dist.
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ATS DocIntel GenAI",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://ats-website-pages.pages.dev/docintel/",
+    "applicationSubCategory": "AI document intelligence",
+    "description": "An AI-assisted web application for understanding and working with business documents.",
+    "creator": {
+      "@type": "Organization",
+      "name": "ADDOMA TRADING SERVICES",
+      "alternateName": "ATS ENG",
+      "url": "https://ats-website-pages.pages.dev/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "sameAs": "https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/"
+  }
+  </script>
 
-النشر على Cloudflare Pages
-ارفع هذا المشروع إلى مستودع GitHub.
-افتح Cloudflare Dashboard ثم Workers & Pages → Create application → Pages → Connect to Git.
-اختر مستودع المشروع.
-استخدم الإعدادات التالية:
-Build command: npm run build
-Build output directory: dist
-Production branch: main
-اضغط Save and Deploy.
-الموقع حاليًا يستخدم نموذج مراسلة ثابتًا يفتح برنامج البريد عبر mailto:. قبل الإطلاق العام، استبدل البريد ورقم الهاتف في index.html، وأضف روابط الفيديو والصور الفعلية للشركة.
+  <style>
+    :root {
+      --ink: #061827;
+      --navy: #092b43;
+      --gold: #e9b82c;
+      --teal: #64c5bd;
+      --paper: #f4f7f7;
+      --muted: #62717a;
+      --line: #dbe5e6;
+    }
 
-Releases
-No releases published
-Create a new release
-Packages
-No packages published
-Publish your first package
-Contributors
-1
- (1)
-@osmanadamaddoma
-osmanadamaddomaOsman Addoma
-Languages
-HTML
-96.8%
-JavaScript
-2.9%
-TypeScript
-0.3%
-Suggested workflows
-Based on your tech stack
+    * {
+      box-sizing: border-box;
+    }
 
-SLSA Generic generator logo
-SLSA Generic generator
-Generate SLSA3 provenance for your existing release workflows
-By Open Source Security Foundation (OpenSSF)
-Jekyll using Docker image logo
-Jekyll using Docker image
-Package a Jekyll site using the jekyll/builder Docker image.
-By GitHub Actions
-Webpack logo
-Webpack
-Build a NodeJS project with npm and webpack.
-By GitHub Actions
-More workflows
- 
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Manrope, "IBM Plex Sans Arabic", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 28px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 14px;
+      letter-spacing: .08em;
+    }
+
+    .brand small {
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .12em;
+    }
+
+    .back {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 70px;
+      align-items: center;
+      padding: 92px 0 72px;
+    }
+
+    .eyebrow {
+      color: #a47d00;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+      margin: 18px 0 24px;
+      max-width: 760px;
+    }
+
+    .hero h1 span {
+      color: #b48708;
+    }
+
+    .lede {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 34px 0 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .primary {
+      background: var(--navy);
+      color: white;
+      box-shadow: 0 10px 28px #092b4330;
+    }
+
+    .primary:hover {
+      background: #123e5b;
+    }
+
+    .secondary {
+      border: 1px solid #a9babc;
+      color: var(--navy);
+      background: white;
+    }
+
+    .note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .terminal {
+      background: var(--navy);
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 20px 25px 70px #092b4330;
+      transform: rotate(2deg);
+    }
+
+    .terminal-top {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #8499a0;
+    }
+
+    .screen {
+      min-height: 330px;
+      border: 1px solid #ffffff28;
+      background: linear-gradient(145deg, #0c3854, #061827);
+      border-radius: 6px;
+      padding: 26px;
+      color: #d9f5ef;
+    }
+
+    .screen-label {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: .16em;
+    }
+
+    .screen h2 {
+      font-size: 32px;
+      line-height: 1.05;
+      margin: 46px 0 22px;
+    }
+
+    .scan {
+      display: grid;
+      gap: 10px;
+    }
+
+    .scan i {
+      display: block;
+      height: 8px;
+      background: #64c5bd55;
+      border-radius: 99px;
+    }
+
+    .scan i:nth-child(2) {
+      width: 75%;
+    }
+
+    .scan i:nth-child(3) {
+      width: 52%;
+    }
+
+    .section {
+      padding: 70px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section h2 {
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      margin: 0 0 36px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 25px;
+      min-height: 210px;
+    }
+
+    .num {
+      color: #a47d00;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin: 24px 0 10px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta {
+      background: var(--navy);
+      color: white;
+      border-radius: 10px;
+      padding: 46px;
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .cta h2 {
+      margin: 0;
+      max-width: 600px;
+    }
+
+    .cta .primary {
+      background: var(--gold);
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 28px 0 42px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer a {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    @media (max-width: 780px) {
+      .shell {
+        padding: 0 18px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 60px 0;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .terminal {
+        transform: none;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        display: block;
+        padding: 30px;
+      }
+
+      .cta .button {
+        margin-top: 24px;
+      }
+
+      .footer {
+        display: block;
+      }
+
+      .footer > * {
+        display: block;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/">
+        <span class="mark">ATS</span>
+        <span>
+          <strong>ATS ENG</strong>
+          <small>INDUSTRIAL GENERATORS &amp; COLD ROOMS</small>
+        </span>
+      </a>
+
+      <a class="back" href="/">← Main ATS website</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="eyebrow">ATS ENG / OMDURMAN → GCC</div>
+
+          <h1 id="hero-title">
+            Documents in.<br>
+            <span>Decisions out.</span>
+          </h1>
+
+          <p class="lede">
+            ATS DocIntel GenAI helps teams explore business documents,
+            extract useful information and move from scattered files to clearer action.
+          </p>
+
+          <div class="actions">
+            <a
+              class="button primary"
+              href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/"
+              target="_blank"
+              rel="noopener">
+              Open ATS DocIntel GenAI ↗
+            </a>
+
+            <a class="button secondary" href="#capabilities">
+              Explore capabilities
+            </a>
+          </div>
+
+          <p class="note">
+            Web application powered by Streamlit · AI-assisted document intelligence
+          </p>
+        </div>
+
+        <div class="terminal" aria-label="ATS DocIntel GenAI interface preview">
+          <div class="terminal-top">
+            <i class="dot"></i>
+            <i class="dot"></i>
+            <i class="dot"></i>
+          </div>
+
+          <div class="screen">
+            <div class="screen-label">ATS / DOCINTEL / GENAI</div>
+            <h2>Read the signal inside every file.</h2>
+
+            <div class="scan">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="capabilities">
+        <div class="eyebrow">WHY DOCINTEL</div>
+
+        <h2>
+          A focused layer between documents and action.
+        </h2>
+
+        <div class="cards">
+          <article class="card">
+            <div class="num">01 / UNDERSTAND</div>
+            <h3>Ask better questions</h3>
+            <p>
+              Use an AI-assisted workflow to explore the information
+              inside your documents with more context.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="num">02 / EXTRACT</div>
+            <h3>Find the useful detail</h3>
+            <p>
+              Move from long files and scattered evidence toward the key
+              facts your team needs to review.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="num">03 / OPERATE</div>
+            <h3>Keep work moving</h3>
+            <p>
+              Give technical, operational and business teams a clearer
+              starting point for the next decision.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="cta">
+          <h2>
+            Ready to open the ATS DocIntel GenAI application?
+          </h2>
+
+          <a
+            class="button primary"
+            href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/"
+            target="_blank"
+            rel="noopener">
+            Launch application ↗
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 ATS ENG — ADDOMA TRADING SERVICES</span>
+      <a href="mailto:servicesaddoma@gmail.com">
+        servicesaddoma@gmail.com
+      </a>
+      <a href="/">
+        ATS ENG Industrial Generators &amp; Cold Rooms — Omdurman / GCC
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
