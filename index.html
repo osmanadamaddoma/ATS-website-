@@ -1,24 +1,19 @@
 <!-- CONTACT LTR + Bilingual - FIXED BY ATS -->
 <section id="contact" dir="ltr" style="background:#0f0f0f;padding:70px 20px;text-align:left; font-family:Inter, sans-serif;">
 <div style="max-width:1100px;margin:auto">
-
   <!-- Language Switch -->
   <div style="text-align:right; margin-bottom:20px;">
     <button onclick="setLang('en')" id="btn-en" style="background:#ff6a00;color:#fff;padding:6px 14px;border:none;border-radius:6px; cursor:pointer;">EN</button>
     <button onclick="setLang('ar')" id="btn-ar" style="background:#222;color:#fff;padding:6px 14px;border:none;border-radius:6px;margin-left:6px; cursor:pointer;">AR</button>
   </div>
-
   <h2 id="t-title" style="text-align:center;color:#ff6a00;font-size:2.2rem;margin:20px 0; font-weight:800;">Contact Us - Built in Omdurman for GCC</h2>
-
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
-
     <div style="background:#151515;border-radius:14px;padding:22px; border:1px solid #222;">
       <h3 id="t-wa" style="color:#fff; margin:0;">Direct WhatsApp</h3>
       <p id="t-wa-sub" style="color:#888; font-size:13px; margin-top:6px;">Response in < 30 min - Omdurman HQ</p>
       <a href="https://wa.me/249922562846" target="_blank" style="display:block;margin-top:16px;background:#25D366;color:#fff;padding:12px;border-radius:8px;text-align:center;text-decoration:none;font-weight:bold;">Open WhatsApp</a>
       <p style="color:#555;margin-top:10px;font-size:12px; text-align:center;">+249 922562846</p>
     </div>
-
     <div style="background:#151515;border-radius:14px;padding:22px;color:#ccc; border:1px solid #222;">
       <h3 style="color:#ff6a00; margin:0;">ATS ENGINEERING</h3>
       <p style="margin-top:12px; line-height:1.6; font-size:14px;">
@@ -28,25 +23,23 @@
         Kide / Porkka Cold Rooms<br>
         <span style="color:#ff6a00;">Omdurman → GCC</span>
       </p>
+      <!-- رابط تطبيق ATS DocIntel GenAI المضاف حديثاً -->
+      <a href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" id="t-app-link" style="display:block;margin-top:14px;background:#ff6a00;color:#fff;padding:10px;border-radius:8px;text-align:center;text-decoration:none;font-weight:bold;font-size:13px;">ATS DocIntel GenAI ↗</a>
     </div>
-
     <div style="background:#fff;border-radius:14px;padding:22px;">
       <input id="ph-name" placeholder="Factory Name" required style="width:100%;padding:12px;margin:6px 0;border:1px solid #ddd;border-radius:8px; box-sizing:border-box;">
       <input id="ph-phone" placeholder="WhatsApp Number" required style="width:100%;padding:12px;margin:6px 0;border:1px solid #ddd;border-radius:8px; box-sizing:border-box;">
       <button id="t-send" onclick="sendToWhatsApp()" style="width:100%;background:#ff6a00;color:#fff;padding:12px;border:none;border-radius:8px;margin-top:10px;font-weight:bold; cursor:pointer;">Send Now → WhatsApp</button>
       <p id="t-note" style="color:#999; font-size:11px; margin-top:8px; text-align:center;">We will reply on WhatsApp</p>
     </div>
-
   </div>
 </div>
 </section>
-
 <script>
 const dict = {
-  en: { title:"Contact Us - Built in Omdurman for GCC", wa:"Direct WhatsApp", wasub:"Response in < 30 min - Omdurman HQ", name:"Factory Name", phone:"WhatsApp Number", send:"Send Now → WhatsApp", note:"We will reply on WhatsApp" },
-  ar: { title:"تواصل معنا - صُنع في أم درمان للخليج", wa:"واتساب مباشر", wasub:"الرد في أقل من 30 دقيقة - أم درمان", name:"اسم المصنع", phone:"رقم الواتساب", send:"إرسال الآن → واتساب", note:"سنرد عليك عبر الواتساب" }
+  en: { title:"Contact Us - Built in Omdurman for GCC", wa:"Direct WhatsApp", wasub:"Response in < 30 min - Omdurman HQ", name:"Factory Name", phone:"WhatsApp Number", send:"Send Now → WhatsApp", note:"We will reply on WhatsApp", appLink:"ATS DocIntel GenAI ↗" },
+  ar: { title:"تواصل معنا - صُنع في أم درمان للخليج", wa:"واتساب مباشر", wasub:"الرد في أقل من 30 دقيقة - أم درمان", name:"اسم المصنع", phone:"رقم الواتساب", send:"إرسال الآن → واتساب", note:"سنرد عليك عبر الواتساب", appLink:"تطبيق الذكاء الاصطناعي ATS ↗" }
 };
-
 function setLang(l){
   document.getElementById('t-title').textContent = dict[l].title;
   document.getElementById('t-wa').textContent = dict[l].wa;
@@ -55,6 +48,7 @@ function setLang(l){
   document.getElementById('ph-phone').placeholder = dict[l].phone;
   document.getElementById('t-send').textContent = dict[l].send;
   document.getElementById('t-note').textContent = dict[l].note;
+  document.getElementById('t-app-link').textContent = dict[l].appLink;
   document.getElementById('contact').dir = l==='ar' ? 'rtl' : 'ltr';
   document.getElementById('contact').style.textAlign = l==='ar' ? 'right' : 'left';
   // active button
@@ -62,7 +56,6 @@ function setLang(l){
   document.getElementById('btn-ar').style.background = l==='ar' ? '#ff6a00' : '#222';
   localStorage.setItem('ats-lang', l);
 }
-
 function sendToWhatsApp(){
   const name = document.getElementById('ph-name').value;
   const phone = document.getElementById('ph-phone').value;
@@ -70,6 +63,5 @@ function sendToWhatsApp(){
   const msg = `Hello ATS, Factory: ${name}, My WhatsApp: ${phone}, I need ATS Panels / Cold Room service.`;
   window.open(`https://wa.me/249922562846?text=${encodeURIComponent(msg)}`, '_blank');
 }
-
 setLang(localStorage.getItem('ats-lang')||'en');
 </script>
