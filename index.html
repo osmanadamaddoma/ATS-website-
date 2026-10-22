@@ -7,7 +7,60 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="contact" dir="ltr" style="background:#0f0f0f;padding:70px 20px;text-align:left; font-family:Inter, sans-serif;">
+    <header>
+        <div class="logo">ATS<span style="font-weight:300;">ADDOMA TRADING SERVICES</span></div>
+        <nav>
+            <a href="#about">About us</a>
+            <a href="#services">Services</a>
+            <a href="#work">Our work</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#videos">Videos</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="padding:100px 20px; text-align:center; background:#0a0a0a; color:#fff;">
+        <span style="color:#ff6a00; font-weight:bold; letter-spacing:2px;">INDUSTRIAL INTELLIGENCE / OMDURMAN → GCC</span>
+        <h1 style="font-size:3rem; margin:20px 0;">Engineering the systems that keep progress moving.</h1>
+        <p style="color:#aaa; max-width:700px; margin:0 auto 30px;">ATS brings engineering, automation, dependable power and generative intelligence into one operating partner for modern industry.</p>
+        <a href="#services" style="background:#ff6a00; color:#fff; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:bold;">Explore our capabilities ↗</a>
+    </section>
+
+    <section id="about" style="padding:70px 20px; background:#111; color:#fff;">
+        <div style="max-width:1100px; margin:auto;">
+            <h2 style="color:#ff6a00; font-size:2rem; margin-bottom:20px;">01 / THE ATS APPROACH</h2>
+            <p style="color:#ccc; line-height:1.8;">Addoma Trading Services is a Sudanese engineering and consulting institution with more than two decades of field experience across power engineering, energy systems, and commercial and industrial refrigeration. We deliver vital projects for private, humanitarian and development partners across Sudan and the Middle East — from UNICEF vaccine cold-chain projects to diesel generation, load-sharing, remote monitoring and AI-enabled predictive maintenance.</p>
+        </div>
+    </section>
+
+    <section id="services" style="padding:70px 20px; background:#0a0a0a; color:#fff;">
+        <div style="max-width:1100px; margin:auto;">
+            <h2 style="color:#ff6a00; font-size:2rem; margin-bottom:30px;">02 / WHAT WE DO</h2>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px;">
+                <div style="background:#151515; padding:25px; border-radius:12px; border:1px solid #222;">
+                    <h3 style="color:#ff6a00; margin-top:0;">Engineering & technical works</h3>
+                    <p style="color:#aaa; font-size:14px;">Engineering delivery, power-plant support and technical works built around real operating conditions and critical-site reliability.</p>
+                </div>
+                <div style="background:#151515; padding:25px; border-radius:12px; border:1px solid #222;">
+                    <h3 style="color:#ff6a00; margin-top:0;">Programming & systems</h3>
+                    <p style="color:#aaa; font-size:14px;">Control panels, Deep Sea displays, telemetry, IoT and SCADA systems that make critical operating information useful.</p>
+                </div>
+                <div style="background:#151515; padding:25px; border-radius:12px; border:1px solid #222;">
+                    <h3 style="color:#ff6a00; margin-top:0;">Power, diesel & generators</h3>
+                    <p style="color:#aaa; font-size:14px;">Maintenance, repair and synchronization for Perkins, Cummins and CAT diesel generators, including load-sharing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" style="padding:70px 20px; background:#111; color:#fff;">
+        <div style="max-width:1100px; margin:auto;">
+            <h2 style="color:#ff6a00; font-size:2rem; margin-bottom:20px;">03 / SELECTED WORK</h2>
+            <p style="color:#ccc;">Power generation, automation, and cold-chain engineering for global organizations across Sudan, South Sudan, and Kuwait.</p>
+        </div>
+    </section>
+
+    <section id="contact" style="background:#0f0f0f; padding:70px 20px; color:#fff; font-family:Inter, sans-serif;">
     <div style="max-width:1100px;margin:auto">
       <div style="text-align:right; margin-bottom:20px;">
         <button onclick="setLang('en')" id="btn-en" style="background:#ff6a00;color:#fff;padding:6px 14px;border:none;border-radius:6px; cursor:pointer;">EN</button>
@@ -42,6 +95,11 @@
       </div>
     </div>
     </section>
+
+    <footer style="background:#050505; color:#777; text-align:center; padding:30px 20px; font-size:13px;">
+        <p>© 2026 Addoma Trading Services (ATS). Built for the field.</p>
+    </footer>
+
     <script>
     const dict = {
       en: { 
