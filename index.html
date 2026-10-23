@@ -300,18 +300,38 @@
                     </div>
                     <p class="heading-note" data-i18n="videos.note">Add your company films, site tours and technical explainers here.</p>
                 </div>
+                
+                <!-- قسم الفيديو التقديمي المباشر داخل الموقع -->
+                <div class="featured-direct-video reveal" style="margin-bottom: 40px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px;">
+                    <div style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #38bdf8; font-size: 0.85rem; font-weight: 700; letter-spacing: 1px;">DIRECT SITE BROADCAST</span>
+                        <span style="color: #94a3b8; font-size: 0.85rem;">VID-20261023-W0003-.mp4</span>
+                    </div>
+                    <h3 style="color: #fff; margin-bottom: 15px; font-size: 1.25rem;">Platform & Services Presentation</h3>
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
+                        <video controls autoplay muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px; object-fit: cover;">
+                            <source src="VID-20261023-W0003-.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
                 <div class="video-grid">
-                    <button class="video-card video-main reveal" type="button" data-video="intro">
-                        <div class="video-art art-intro"><span class="play-button">▶</span><div><small>ATS / FILM 001</small><strong data-i18n="videos.card1">Industrial Intelligence Suite</strong></div></div>
-                        <div class="video-meta"><span data-i18n="videos.watch">Watch film</span><span>01:24 ↗</span></div>
+                    <button class="video-card video-main reveal" type="button" onclick="window.open('https://youtu.be/PLAllvODgFU', '_blank')">
+                        <div class="video-art art-intro"><span class="play-button">▶</span><div><small>ATS / YOUTUBE 01</small><strong>System & Operations Overview</strong></div></div>
+                        <div class="video-meta"><span>Watch on YouTube</span><span>02:15 ↗</span></div>
                     </button>
-                    <button class="video-card reveal reveal-delay" type="button" data-video="field">
-                        <div class="video-art art-field"><span class="play-button">▶</span><div><small>FIELD NOTE 002</small><strong data-i18n="videos.card2">Inside the operating room</strong></div></div>
-                        <div class="video-meta"><span data-i18n="videos.watch">Watch film</span><span>00:48 ↗</span></div>
+                    <button class="video-card reveal reveal-delay" type="button" onclick="window.open('https://youtu.be/n1lh4hFqXtg', '_blank')">
+                        <div class="video-art art-field"><span class="play-button">▶</span><div><small>ATS / YOUTUBE 02</small><strong>Engineering & Technical Suite</strong></div></div>
+                        <div class="video-meta"><span>Watch on YouTube</span><span>01:40 ↗</span></div>
                     </button>
-                    <button class="video-card reveal reveal-delay-2" type="button" data-video="future">
-                        <div class="video-art art-future"><span class="play-button">▶</span><div><small>AI / EXPLAINER 003</small><strong data-i18n="videos.card3">When maintenance can see ahead</strong></div></div>
-                        <div class="video-meta"><span data-i18n="videos.watch">Watch film</span><span>01:12 ↗</span></div>
+                    <button class="video-card reveal reveal-delay-2" type="button" onclick="window.open('https://youtu.be/v8p6hORy1D4', '_blank')">
+                        <div class="video-art art-future"><span class="play-button">▶</span><div><small>ATS / YOUTUBE 03</small><strong>Power & Maintenance Workflow</strong></div></div>
+                        <div class="video-meta"><span>Watch on YouTube</span><span>03:10 ↗</span></div>
+                    </button>
+                    <button class="video-card reveal" type="button" onclick="window.open('https://youtube.com/shorts/s4goj7w4NRc', '_blank')">
+                        <div class="video-art art-intro"><span class="play-button">▶</span><div><small>ATS / YOUTUBE SHORTS</small><strong>Quick Field Insight</strong></div></div>
+                        <div class="video-meta"><span>Watch on YouTube</span><span>00:58 ↗</span></div>
                     </button>
                 </div>
             </section>
