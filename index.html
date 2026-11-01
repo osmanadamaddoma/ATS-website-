@@ -71,6 +71,45 @@ gtag('config','G-ATS2026');
     </script>
 </head>
 <body>
+    <!-- ATS GenAI Popup FINAL - مع رابطك -->
+<style>
+#ats-popup-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:99999;align-items:center;justify-content:center;padding:12px}
+#ats-popup-overlay.active{display:flex}
+#ats-popup-box{background:white;border-radius:16px;max-width:520px;width:100%;padding:0;overflow:hidden;animation:popIn 0.3s ease;max-height:90vh;display:flex;flex-direction:column}
+@keyframes popIn{from{transform:scale(0.9);opacity:0}to{transform:scale(1);opacity:1}}
+#ats-popup-header{background:linear-gradient(90deg,#00A651,#008a44);color:white;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+#ats-popup-body{padding:0;overflow:auto}
+#ats-iframe{width:100%;height:520px;border:none}
+#ats-popup-close{background:rgba(255,255,255,0.2);border:none;color:white;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px}
+</style>
+
+<!-- البنر في الموقع -->
+<div style="background:linear-gradient(90deg,#00A651,#008a44);color:white;padding:24px 20px;text-align:center;margin:20px 0;border-radius:12px;font-family:sans-serif">
+  <h2 style="margin:0 0 8px;font-size:22px">🤖 ATS DocIntel GenAI - جديد!</h2>
+  <p style="margin:0 0 14px;opacity:0.95;font-size:15px">شخّص عطل مولدك في 30 ثانية بالذكاء الاصطناعي</p>
+  <button onclick="document.getElementById('ats-popup-overlay').classList.add('active')" style="background:white;color:#00A651;padding:12px 32px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;font-size:16px;box-shadow:0 4px 12px rgba(0,0,0,0.15)">🚀 جرّب الآن مجاناً</button>
+  <p style="margin:10px 0 0;font-size:11px;opacity:0.8">بدون تسجيل - مباشر من الموقع</p>
+</div>
+
+<!-- Popup مع تطبيقك -->
+<div id="ats-popup-overlay" onclick="if(event.target==this)this.classList.remove('active')">
+  <div id="ats-popup-box">
+    <div id="ats-popup-header">
+      <div>
+        <strong>ATS DocIntel GenAI</strong><br>
+        <span style="font-size:12px;opacity:0.9">https://ats-docgen-ai...streamlit.app</span>
+      </div>
+      <button id="ats-popup-close" onclick="document.getElementById('ats-popup-overlay').classList.remove('active')">✕</button>
+    </div>
+    <div id="ats-popup-body">
+      <iframe id="ats-iframe" src="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/?embedded=true" loading="lazy" allow="clipboard-read; clipboard-write"></iframe>
+    </div>
+    <div style="padding:10px 16px;background:#f8f8f8;display:flex;gap:8px">
+      <a href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" style="flex:1;text-align:center;padding:10px;background:#00A651;color:white;border-radius:6px;text-decoration:none;font-weight:bold;font-size:14px">فتح في صفحة كاملة</a>
+      <button onclick="document.getElementById('ats-popup-overlay').classList.remove('active')" style="flex:1;padding:10px;background:white;border:1px solid #ddd;border-radius:6px;cursor:pointer">إغلاق</button>
+    </div>
+  </div>
+</div>
     <a href="tel:+249912544637" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 20px;border-radius:50px;text-decoration:none;font-weight:bold;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.3)">📞 اتصل الآن</a>
     <div class="site-shell">
         <header class="site-header">
