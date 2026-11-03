@@ -32,16 +32,6 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Google Analytics - يحسب الزوار -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ATS2026"></script>
-    <script>
-    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
-    gtag('js',new Date());
-    gtag('config','G-ATS2026');
-    </script>
-    <!-- Cloudflare Analytics - مجاني وأدق -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ats-website-eot"}'></script>
-    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -99,7 +89,7 @@
       <button id="ats-popup-close" onclick="document.getElementById('ats-popup-overlay').classList.remove('active')">✕</button>
     </div>
     <div id="ats-popup-body">
-      <iframe id="ats-iframe" src="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/?embedded=true" loading="lazy" allow="clipboard-read; clipboard-write"></iframe>
+      <iframe id="ats-iframe" data-src="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/?embedded=true" src="" loading="lazy" allow="clipboard-read; clipboard-write"></iframe>
     </div>
     <div style="padding:10px 16px;background:#f8f8f8;display:flex;gap:8px">
       <a href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" style="flex:1;text-align:center;padding:10px;background:#00A651;color:white;border-radius:6px;text-decoration:none;font-weight:bold;font-size:14px">فتح في صفحة كاملة</a>
