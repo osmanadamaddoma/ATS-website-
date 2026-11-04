@@ -70,7 +70,7 @@
 <div style="background:linear-gradient(90deg,#00A651,#008a44);color:white;padding:24px 20px;text-align:center;margin:20px 0;border-radius:12px;font-family:sans-serif">
   <h2 style="margin:0 0 8px;font-size:22px">🤖 ATS DocIntel GenAI - جديد!</h2>
   <p style="margin:0 0 14px;opacity:0.95;font-size:15px">شخّص عطل مولدك في 30 ثانية بالذكاء الاصطناعي</p>
-  <button onclick="document.getElementById('ats-popup-overlay').classList.add('active')" style="background:white;color:#00A651;padding:12px 32px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;font-size:16px;box-shadow:0 4px 12px rgba(0,0,0,0.15)">🚀 جرّب الآن مجاناً</button>
+  <button onclick="openAtsPopup()" style="background:white;color:#00A651;padding:12px 32px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;font-size:16px;box-shadow:0 4px 12px rgba(0,0,0,0.15)">🚀 جرّب الآن مجاناً</button>
   <p style="margin:10px 0 0;font-size:11px;opacity:0.8">بدون تسجيل - مباشر من الموقع</p>
 </div>
 <!-- Popup مع تطبيقك -->
@@ -84,7 +84,7 @@
       <button id="ats-popup-close" onclick="document.getElementById('ats-popup-overlay').classList.remove('active')">✕</button>
     </div>
     <div id="ats-popup-body">
-      <iframe id="ats-iframe" data-src="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/?embedded=true" src="" loading="lazy" allow="clipboard-read; clipboard-write"></iframe>
+      <iframe id="ats-iframe" data-src="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/?embedded=true" src="" allow="clipboard-read; clipboard-write"></iframe>
     </div>
     <div style="padding:10px 16px;background:#f8f8f8;display:flex;gap:8px">
       <a href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" style="flex:1;text-align:center;padding:10px;background:#00A651;color:white;border-radius:6px;text-decoration:none;font-weight:bold;font-size:14px">فتح في صفحة كاملة</a>
@@ -107,7 +107,7 @@
 <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
 <a href="#videos" data-i18n="nav.videos">Videos</a>
 <a href="#contact" data-i18n="nav.contact">Contact</a>
-<a href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" rel="noopener noreferrer" data-i18n="nav.docintel">ATS DocIntel GenAI ↗</a>
+<a href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" rel="noopener noreferrer" data-i18n="nav.docintel" onclick="openAtsPopup(); return false;">ATS DocIntel GenAI ↗</a>
 </nav>
 <div class="header-actions">
 <button class="lang-switch" id="langToggle" type="button" aria-label="Switch language">عربي</button>
@@ -127,10 +127,10 @@
 <a class="button button-primary" href="#services"><span data-i18n="hero.primary">Explore our capabilities</span><span>↗</span></a>
 <a class="text-link" href="#work"><span data-i18n="hero.secondary">See selected work</span><span>↓</span></a>
 </div>
-<a class="app-hero-button" href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" rel="noopener noreferrer">
+<a class="app-hero-button" href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" rel="noopener noreferrer" onclick="openAtsPopup(); return false;">
 <strong data-i18n="hero.appButton">Open ATS DocIntel GenAI</strong><span aria-hidden="true">↗</span>
 </a>
-<a class="app-launch-link" href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" rel="noopener noreferrer">
+<a class="app-launch-link" href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" rel="noopener noreferrer" onclick="openAtsPopup(); return false;">
 <span class="app-launch-kicker" data-i18n="hero.appKicker">ATS DOCINTEL GENAI</span>
 <span class="app-launch-label" data-i18n="hero.appLink">Open the AI document application</span><span aria-hidden="true">↗</span>
 </a>
@@ -147,7 +147,7 @@
 <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
 <div class="visual-panel brand-panel">
 <div class="panel-topline"><span data-i18n="hero.panelTag">ATS / FIELD NOTE 001</span><span class="live-label"><i></i><span data-i18n="hero.live">LIVE SYSTEMS</span></span></div>
-<div class="logo-frame"><img src="/logo-ats.jpg" alt="ADDOMA TRADING SERVICES logo" loading="lazy" width="120" height="120"></div>
+<div class="logo-frame"><img src="/logo-ats.jpg" alt="ADDOMA TRADING SERVICES logo" fetchpriority="high" loading="eager" width="120" height="120"></div>
 <div class="panel-caption"><span data-i18n="hero.panelCaption">Industrial Intelligence Suite</span><span>01 — 04</span></div>
 </div>
 <div class="floating-card card-power"><span class="card-icon">↯</span><div><small data-i18n="hero.powerSmall">POWER SYSTEMS</small><strong data-i18n="hero.powerStrong">Always on.</strong></div></div>
@@ -451,9 +451,21 @@ Your browser does not support the video tag.
 <div class="lightbox-content" id="lightboxContent"></div>
 </div>
 <script>
+// دالة فتح نافذة الـ Popup المحدثة لمنع خطأ الـ IntersectionObserver وفتح الشاشة مباشرة
+function openAtsPopup(){
+  const iframe = document.getElementById('ats-iframe');
+  if(iframe && !iframe.src) {
+    iframe.src = iframe.dataset.src;
+  }
+  const overlay = document.getElementById('ats-popup-overlay');
+  if(overlay) {
+    overlay.classList.add('active');
+  }
+}
+
 // Performance optimization: Lazy load iframes and activate iframe src only when scrolled into view or loaded
 document.addEventListener("DOMContentLoaded", function() {
-    const iframes = document.querySelectorAll('iframe[data-src]');
+    const iframes = document.querySelectorAll('iframe[data-src]:not(#ats-iframe)');
     const iframeObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -472,3 +484,4 @@ document.addEventListener("DOMContentLoaded", function() {
 <script src="/app.js"></script>
 </body>
 </html>
+
