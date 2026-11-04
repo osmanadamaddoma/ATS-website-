@@ -6,3 +6,78 @@ body[dir=rtl] .desktop-nav,body[dir=rtl] .header-actions{direction:rtl}body[dir=
 .app-nav-link{color:var(--gold-light)!important;border:1px solid rgba(217,170,53,.55);padding:7px 10px;font-weight:800!important;white-space:nowrap}.app-nav-link:hover{background:var(--gold);color:var(--navy)!important}
 @media(max-width:1080px){.desktop-nav{gap:12px}.app-nav-link{font-size:10px!important;padding:6px 7px}}
 .app-hero-button{display:inline-flex;align-items:center;gap:18px;margin-top:22px;padding:14px 18px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:transform .2s,background .2s}.app-hero-button:hover{transform:translateY(-3px);background:var(--gold-light)}
+/* === ATS FIX: CLS + INP - Nov 2026 === */
+
+/* 1. ثبت الـ Hero عشان ما يتهز */
+.hero-visual{
+  contain: layout paint;
+  overflow: hidden;
+  min-height: 560px;
+}
+@media(max-width:700px){
+  .hero-visual{ min-height: 400px; }
+}
+
+/* 2. ثبت الـ Orbit - وقف الـ Rotate اللي بيعمل Shift */
+.hero-orbit{
+  will-change: transform;
+  transform: translateZ(0) rotate(-20deg);
+  contain: layout paint;
+  pointer-events: none;
+}
+.orbit-two{
+  transform: translateZ(0) rotate(35deg);
+}
+
+/* 3. الغي الـ Reveal في الـ Hero فقط - ده سبب CLS 0.216 */
+.hero-visual .reveal,
+.hero-copy .reveal{
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* 4. باقي الصفحة: Reveal بالـ Opacity فقط، بدون Translate */
+.reveal{
+  transform: none !important;
+  transition: opacity .5s ease !important;
+}
+.reveal.visible{ transform: none !important; }
+
+/* 5. ثبت الـ Visual Panel */
+.visual-panel{
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* 6. ثبت الـ Floating Cards */
+.floating-card{
+  will-change: transform;
+  transform: translateZ(0);
+  contain: layout paint;
+}
+
+/* 7. INP: وقف الـ Hover Translate - ده اللي بيأخر الضغطة */
+.button:hover,
+.service-card:hover,
+.app-launch-link:hover,
+.app-hero-button:hover{
+  transform: none !important;
+}
+.service-card, .button, .app-launch-link{
+  transition: background .2s, border-color .2s !important;
+}
+
+/* 8. Ticker و Bars - خليهم على الـ GPU */
+.ticker-track, .signal-bars i{
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* 9. احترام المستخدمين اللي عندهم Reduced Motion */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
