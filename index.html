@@ -65,6 +65,38 @@
 #ats-popup-body{padding:0;overflow:auto}
 #ats-iframe{width:100%;height:520px;border:none}
 #ats-popup-close{background:rgba(255,255,255,0.2);border:none;color:white;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px}
+
+/* === ATS FIX: INP - YouTube Facade === */
+.video-facade{
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  cursor: pointer;
+  contain: layout paint;
+}
+.video-facade img{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.facade-play{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60px; height: 60px;
+  background: #D9AA35;
+  color: #071827;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  padding-left: 3px;
+}
+
 </style>
 <!-- البنر في الموقع -->
 <div style="background:linear-gradient(90deg,#00A651,#008a44);color:white;padding:24px 20px;text-align:center;margin:20px 0;border-radius:12px;font-family:sans-serif">
@@ -87,7 +119,7 @@
       <iframe id="ats-iframe" data-src="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/?embedded=true" src="" allow="clipboard-read; clipboard-write"></iframe>
     </div>
     <div style="padding:10px 16px;background:#f8f8f8;display:flex;gap:8px">
-      <a href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" style="flex:1;text-align:center;padding:10px;background:#00A651;color:white;border-radius:6px;text-decoration:none;font-weight:bold;font-size:14px">فتح في صفحة كاملة</a>
+      <a href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/" target="_blank" rel="noopener" onclick="window.open(this.href,'_blank','noopener'); return false;" style="flex:1;text-align:center;padding:10px;background:#00A651;color:white;border-radius:6px;text-decoration:none;font-weight:bold;font-size:14px">فتح في صفحة كاملة</a>
       <button onclick="document.getElementById('ats-popup-overlay').classList.remove('active')" style="flex:1;padding:10px;background:white;border:1px solid #ddd;border-radius:6px;cursor:pointer">إغلاق</button>
     </div>
   </div>
@@ -359,29 +391,33 @@ Your browser does not support the video tag.
 <div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
 <!-- يوتيوب 1 -->
 <div class="video-embed-card reveal" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px;">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000; margin-bottom: 12px;">
-<iframe data-src="https://www.youtube.com/embed/PLAllvODgFU?rel=0" title="System & Operations Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;" loading="lazy"></iframe>
+<div class="video-facade" data-video="PLAllvODgFU" onclick="loadYoutube(this)" style="margin-bottom: 12px;">
+  <img src="https://i.ytimg.com/vi/PLAllvODgFU/hqdefault.jpg" alt="System & Operations Overview" loading="lazy" width="640" height="360">
+  <span class="facade-play">▶</span>
 </div>
 <strong style="color: #fff; font-size: 0.95rem; display: block;">System & Operations Overview</strong>
 </div>
 <!-- يوتيوب 2 -->
 <div class="video-embed-card reveal reveal-delay" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px;">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000; margin-bottom: 12px;">
-<iframe data-src="https://www.youtube.com/embed/n1lh4hFqXtg?rel=0" title="Engineering & Technical Suite" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;" loading="lazy"></iframe>
+<div class="video-facade" data-video="n1lh4hFqXtg" onclick="loadYoutube(this)" style="margin-bottom: 12px;">
+  <img src="https://i.ytimg.com/vi/n1lh4hFqXtg/hqdefault.jpg" alt="Engineering & Technical Suite" loading="lazy" width="640" height="360">
+  <span class="facade-play">▶</span>
 </div>
 <strong style="color: #fff; font-size: 0.95rem; display: block;">Engineering & Technical Suite</strong>
 </div>
 <!-- يوتيوب 3 -->
 <div class="video-embed-card reveal reveal-delay-2" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px;">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000; margin-bottom: 12px;">
-<iframe data-src="https://www.youtube.com/embed/v8p6hORy1D4?rel=0" title="Power & Maintenance Workflow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;" loading="lazy"></iframe>
+<div class="video-facade" data-video="v8p6hORy1D4" onclick="loadYoutube(this)" style="margin-bottom: 12px;">
+  <img src="https://i.ytimg.com/vi/v8p6hORy1D4/hqdefault.jpg" alt="Power & Maintenance Workflow" loading="lazy" width="640" height="360">
+  <span class="facade-play">▶</span>
 </div>
 <strong style="color: #fff; font-size: 0.95rem; display: block;">Power & Maintenance Workflow</strong>
 </div>
 <!-- يوتيوب شورتس -->
 <div class="video-embed-card reveal" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px;">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000; margin-bottom: 12px;">
-<iframe data-src="https://www.youtube.com/embed/s4goj7w4NRc?rel=0" title="Quick Field Insight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;" loading="lazy"></iframe>
+<div class="video-facade" data-video="s4goj7w4NRc" onclick="loadYoutube(this)" style="margin-bottom: 12px;">
+  <img src="https://i.ytimg.com/vi/s4goj7w4NRc/hqdefault.jpg" alt="Quick Field Insight" loading="lazy" width="640" height="360">
+  <span class="facade-play">▶</span>
 </div>
 <strong style="color: #fff; font-size: 0.95rem; display: block;">Quick Field Insight (Shorts)</strong>
 </div>
@@ -451,18 +487,20 @@ Your browser does not support the video tag.
 <div class="lightbox-content" id="lightboxContent"></div>
 </div>
 <script>
-// دالة فتح نافذة الـ Popup المحدثة لاستخدام getAttribute('src') وفتح التطبيق في نافذة تبويب جديدة خارج الموقع عند الحاجة
 function openAtsPopup(){
-  const iframe = document.getElementById('ats-iframe');
-  if(iframe) {
-    if(!iframe.src || iframe.src === window.location.href) {
-      iframe.src = iframe.getAttribute('data-src');
-    }
+  var iframe = document.getElementById('ats-iframe');
+  // استخدم getAttribute مش .src - ده اللي قلنا عليه المرة الفاتت
+  if(iframe && !iframe.getAttribute('src')){
+    // أجل تحميل الـ iframe 100ms عشان الـ Popup يفتح أولاً
+    setTimeout(function(){ iframe.src = iframe.dataset.src; }, 100);
   }
-  const overlay = document.getElementById('ats-popup-overlay');
-  if(overlay) {
-    overlay.classList.add('active');
-  }
+  var overlay = document.getElementById('ats-popup-overlay');
+  if(overlay) overlay.classList.add('active');
+}
+
+function loadYoutube(el){
+  var id = el.getAttribute('data-video');
+  el.innerHTML = '<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>';
 }
 
 // Performance optimization: Lazy load iframes and activate iframe src only when scrolled into view or loaded
