@@ -16,17 +16,16 @@
 <meta property="og:site_name" content="ADDOMA TRADING SERVICES">
 <meta property="og:title" content="ATS ENG | Industrial Generators & Cold Rooms | Omdurman / GCC">
 <meta property="og:description" content="ATS ENG - Industrial Generators & Cold Rooms in Omdurman / GCC. Engineering, power, refrigeration, SCADA and predictive maintenance solutions.">
-<meta property="og:image" content="https://ats-website-eot.pages.dev/images/og-image.jpg.png">
+<meta property="og:image" content="https://ats-website-eot.pages.dev/og-image.jpg.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="ATS ENG - Industrial Generators & Cold Rooms">
 <meta property="og:locale" content="en_US">
-
 <!-- Twitter / WhatsApp Preview -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ATS ENG | Industrial Generators & Cold Rooms">
 <meta name="twitter:description" content="Industrial Generators & Cold Rooms in Omdurman / GCC. Power, refrigeration, SCADA and predictive maintenance.">
-<meta name="twitter:image" content="https://ats-website-eot.pages.dev/images/og-image.jpg.png">
+<meta name="twitter:image" content="https://ats-website-eot.pages.dev/og-image.jpg.png">
 <link rel="icon" href="/logo-ats.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,7 +69,6 @@
 #ats-popup-body{padding:0;overflow:auto}
 #ats-iframe{width:100%;height:520px;border:none}
 #ats-popup-close{background:rgba(255,255,255,0.2);border:none;color:white;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px}
-
 /* === ATS FIX: INP - YouTube Facade === */
 .video-facade{
   position: relative;
@@ -101,7 +99,6 @@
   font-size: 20px;
   padding-left: 3px;
 }
-
 </style>
 <!-- البنر في الموقع -->
 <div style="background:linear-gradient(90deg,#00A651,#008a44);color:white;padding:24px 20px;text-align:center;margin:20px 0;border-radius:12px;font-family:sans-serif">
@@ -450,6 +447,9 @@ Your browser does not support the video tag.
 </div>
 </div>
 <form class="contact-form reveal reveal-delay" id="contactForm" action="https://formspree.io/f/xgaorrrb" method="POST">
+<input type="hidden" name="_subject" value="New enquiry from ATS website">
+<input type="hidden" name="_next" value="https://ats-website-eot.pages.dev/?sent=1">
+<input type="text" name="_gotcha" style="display:none">
 <div class="form-row">
 <label><span data-i18n="form.name">Your name</span><input required name="name" type="text" placeholder="Jane Smith" /></label>
 <label><span data-i18n="form.email">Work email</span><input required name="email" type="email" placeholder="you@company.com" /></label>
@@ -494,21 +494,16 @@ Your browser does not support the video tag.
 <script>
 function openAtsPopup(){
   var iframe = document.getElementById('ats-iframe');
-  // استخدم getAttribute مش .src - ده اللي قلنا عليه المرة الفاتت
   if(iframe && !iframe.getAttribute('src')){
-    // أجل تحميل الـ iframe 100ms عشان الـ Popup يفتح أولاً
     setTimeout(function(){ iframe.src = iframe.dataset.src; }, 100);
   }
   var overlay = document.getElementById('ats-popup-overlay');
   if(overlay) overlay.classList.add('active');
 }
-
 function loadYoutube(el){
   var id = el.getAttribute('data-video');
   el.innerHTML = '<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>';
 }
-
-// Performance optimization: Lazy load iframes and activate iframe src only when scrolled into view or loaded
 document.addEventListener("DOMContentLoaded", function() {
     const iframes = document.querySelectorAll('iframe[data-src]:not(#ats-iframe)');
     const iframeObserver = new IntersectionObserver((entries, observer) => {
@@ -520,7 +515,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }, { rootMargin: "200px 0px" });
-
     iframes.forEach(iframe => {
         iframeObserver.observe(iframe);
     });
@@ -529,4 +523,3 @@ document.addEventListener("DOMContentLoaded", function() {
 <script src="/app.js" defer></script>
 </body>
 </html>
-
