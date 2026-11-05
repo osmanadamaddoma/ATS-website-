@@ -10,10 +10,8 @@
 <title>ATS ENG | Industrial Generators & Cold Rooms | Omdurman / GCC</title>
 <meta name="description" content="ATS ENG - Industrial Generators & Cold Rooms in Omdurman / GCC. ADDOMA TRADING SERVICES delivers engineering, power, refrigeration, SCADA and predictive maintenance solutions.">
 <meta name="keywords" content="ATS ENG, Industrial Generators, Cold Rooms, Omdurman, GCC, Sudan engineering, diesel generators, Porkka, SCADA, predictive maintenance, AI, asset management, مولدات السودان">
-<!-- FIX LCP: preload hero logo -->
 <link rel="preload" as="image" href="/logo-ats.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app">
-<!-- Open Graph / WhatsApp / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ats-website-eot.pages.dev/">
 <meta property="og:site_name" content="ADDOMA TRADING SERVICES">
@@ -26,7 +24,6 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="ATS ENG - Industrial Generators & Cold Rooms">
 <meta property="og:locale" content="en_US">
-<!-- Twitter / WhatsApp Preview -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ATS ENG | Industrial Generators & Cold Rooms">
 <meta name="twitter:description" content="Industrial Generators & Cold Rooms in Omdurman / GCC. Power, refrigeration, SCADA and predictive maintenance.">
@@ -62,18 +59,26 @@
 ]
 }
 </script>
-<!-- FIX CLS: reserve space for hero orbits, prevent layout shift -->
+<!-- FIX CLS v2: hero-orbit + videos - reserve space before images load -->
 <style>
-.hero-visual{min-height:420px;contain:layout}
-.hero-orbit{position:absolute;width:220px;height:220px;contain:layout paint}
+.hero-visual{min-height:420px;contain:layout;position:relative}
+.hero-orbit{position:absolute;width:220px;height:220px;aspect-ratio:1/1;contain:layout paint;transform:translateZ(0);will-change:transform}
 .hero-orbit.orbit-one{top:0;right:0}
 .hero-orbit.orbit-two{bottom:0;left:0}
 img{max-width:100%;height:auto}
-.video-facade{contain:layout paint}
+.video-facade{contain:layout paint;aspect-ratio:16/9}
+/* FIX CLS #videos 0.286 - NEW */
+#videos{contain:layout}
+.featured-direct-video{min-height:420px;contain:layout;content-visibility:auto}
+.video-grid{min-height:320px;contain:layout}
+.video-embed-card{min-height:300px;contain:layout;content-visibility:auto}
+.video-embed-card .video-facade{min-height:180px}
+.work-visual,.project-photo{aspect-ratio:4/3;contain:layout;overflow:hidden}
+.gallery-grid{contain:layout}
+.gallery-item{aspect-ratio:4/3;contain:layout;overflow:hidden}
 </style>
 </head>
 <body>
-<!-- ATS GenAI Popup FINAL -->
 <style>
 #ats-popup-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:99999;align-items:center;justify-content:center;padding:12px}
 #ats-popup-overlay.active{display:flex}
@@ -103,7 +108,6 @@ img{max-width:100%;height:auto}
       <button id="ats-popup-close" onclick="document.getElementById('ats-popup-overlay').classList.remove('active')">✕</button>
     </div>
     <div id="ats-popup-body">
-      <!-- FIX INP: lazy iframe, only loads on click -->
       <iframe id="ats-iframe" data-src="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/?embedded=true" src="" loading="lazy" title="ATS DocIntel GenAI" allow="clipboard-read; clipboard-write"></iframe>
     </div>
     <div style="padding:10px 16px;background:#f8f8f8;display:flex;gap:8px">
@@ -463,7 +467,6 @@ Your browser does not support the video tag.
 <button class="lightbox-close" type="button" aria-label="Close">×</button>
 <div class="lightbox-content" id="lightboxContent"></div>
 </div>
-<!-- FIX INP: defer all JS until browser is idle -->
 <script>
 function openAtsPopup(){
   var iframe = document.getElementById('ats-iframe');
@@ -477,7 +480,6 @@ function loadYoutube(el){
   var id = el.getAttribute('data-video');
   el.innerHTML = '<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" title="YouTube video" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>';
 }
-// FIX: no IntersectionObserver on load - run only when idle
 function atsInitIdle(){
   if('requestIdleCallback' in window){
     requestIdleCallback(function(){}, {timeout:2000});
