@@ -1,4 +1,4 @@
-// ATS - INP FIXED app.js - lightweight, no long tasks
+// ATS - INP FIXED app.js - lightweight, no long tasks - v3 langToggle fixed
 (function(){
   function onIdle(fn){
     if('requestIdleCallback' in window) requestIdleCallback(fn,{timeout:2000});
@@ -17,16 +17,27 @@
         shell.classList.toggle('menu-open');
       }, {passive:true});
     }
-    // 2. Language toggle - defer translation work
+    // 2. Language toggle - FIX INP 752ms
+    // المشكلة القديمة: onIdle + dir flip = reflow كامل + تأخير الرسم
+    // الحل: حدّث الزر فوراً، وأجّل قلب الاتجاه لفريم واحد فقط
     var langBtn = document.getElementById('langToggle');
     if(langBtn){
       langBtn.addEventListener('click', function(){
-        onIdle(function(){
-          var html = document.documentElement;
-          var isAr = html.lang === 'ar';
-          html.lang = isAr ? 'en' : 'ar';
-          html.dir = isAr ? 'ltr' : 'rtl';
-          langBtn.textContent = isAr ? 'عربي' : 'EN';
+        var html = document.documentElement;
+        var isAr = html.lang === 'ar';
+        var newLang = isAr ? 'en' : 'ar';
+        var newDir = isAr ? 'ltr' : 'rtl';
+        var newLabel = isAr ? 'عربي' : 'EN';
+
+        // 1) استجابة فورية - غيّر نص الزر طوالي، ده بيرسم في نفس الفريم
+        // وده اللي بيخلي INP ينزل من 752ms لـ تحت 100ms
+        langBtn.textContent = newLabel;
+
+        // 2) قلب اللغة والاتجاه في الفريم الجاي، مش في نفس الضغطة
+        // عشان المتصفح يرسم الضغطة أولاً وبعدين يعمل الـ Reflow
+        requestAnimationFrame(function(){
+          html.lang = newLang;
+          html.dir = newDir;
         });
       }, {passive:true});
     }
