@@ -11,7 +11,6 @@
 <meta name="description" content="ATS ENG - Industrial Generators & Cold Rooms in Omdurman / GCC. ADDOMA TRADING SERVICES delivers engineering, power, refrigeration, SCADA and predictive maintenance solutions.">
 <meta name="keywords" content="ATS ENG, Industrial Generators, Cold Rooms, Omdurman, GCC, Sudan engineering, diesel generators, Porkka, SCADA, predictive maintenance, AI, asset management, مولدات السودان">
 <link rel="preload" as="image" href="/logo-ats.jpg" fetchpriority="high">
-<link rel="preconnect" href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ats-website-eot.pages.dev/">
 <meta property="og:site_name" content="ADDOMA TRADING SERVICES">
@@ -59,7 +58,6 @@
 ]
 }
 </script>
-<!-- FIX CLS v2: hero-orbit + videos - reserve space before images load -->
 <style>
 .hero-visual{min-height:420px;contain:layout;position:relative}
 .hero-orbit{position:absolute;width:220px;height:220px;aspect-ratio:1/1;contain:layout paint;transform:translateZ(0);will-change:transform}
@@ -67,7 +65,6 @@
 .hero-orbit.orbit-two{bottom:0;left:0}
 img{max-width:100%;height:auto}
 .video-facade{contain:layout paint;aspect-ratio:16/9}
-/* FIX CLS #videos 0.286 - NEW */
 #videos{contain:layout}
 .featured-direct-video{min-height:420px;contain:layout;content-visibility:auto}
 .video-grid{min-height:320px;contain:layout}
@@ -76,10 +73,11 @@ img{max-width:100%;height:auto}
 .work-visual,.project-photo{aspect-ratio:4/3;contain:layout;overflow:hidden}
 .gallery-grid{contain:layout}
 .gallery-item{aspect-ratio:4/3;contain:layout;overflow:hidden}
-/* FIX CLS hero-visual 0.141 - وقف قفزة الـ reveal */
 .reveal{transform:none !important;opacity:1 !important}
 .reveal.visible{transform:none !important;opacity:1 !important}
 .hero-copy{contain:layout}
+.logo-frame{width:120px;height:120px;aspect-ratio:1/1;contain:layout paint;overflow:hidden}
+.logo-frame img{width:120px;height:120px;object-fit:contain;display:block}
 </style>
 </head>
 <body>
@@ -174,7 +172,7 @@ img{max-width:100%;height:auto}
 <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
 <div class="visual-panel brand-panel">
 <div class="panel-topline"><span data-i18n="hero.panelTag">ATS / FIELD NOTE 001</span><span class="live-label"><i></i><span data-i18n="hero.live">LIVE SYSTEMS</span></span></div>
-<div class="logo-frame"><img src="/logo-ats.jpg" alt="ADDOMA TRADING SERVICES logo" fetchpriority="high" loading="eager" decoding="sync" width="120" height="120"></div>
+<div class="logo-frame"><img src="/logo-ats.jpg" alt="ADDOMA TRADING SERVICES logo" fetchpriority="high" loading="eager" decoding="async" width="120" height="120"></div>
 <div class="panel-caption"><span data-i18n="hero.panelCaption">Industrial Intelligence Suite</span><span>01 — 04</span></div>
 </div>
 <div class="floating-card card-power"><span class="card-icon">↯</span><div><small data-i18n="hero.powerSmall">POWER SYSTEMS</small><strong data-i18n="hero.powerStrong">Always on.</strong></div></div>
@@ -303,7 +301,6 @@ img{max-width:100%;height:auto}
 <div class="project-thumbs">
 <img src="/20180517_104007.jpg" alt="Petrofac project image 1" loading="lazy" decoding="async" width="400" height="300" />
 <img src="/FB_IMG_15283509045889598.jpg" alt="Petrofac project image 2" loading="lazy" decoding="async" width="400" height="300" />
-<img src="/Petrofac-Kuwait-2018-01-jpg.jpg" alt="Petrofac project image 3" loading="lazy" decoding="async" width="400" height="300" />
 <img src="/Petrofac-Kuwait-2018-02-jpg.jpg" alt="Petrofac project image 4" loading="lazy" decoding="async" width="400" height="300" />
 </div>
 </div>
@@ -369,7 +366,7 @@ img{max-width:100%;height:auto}
 </div>
 <h3 style="color: #fff; margin-bottom: 15px; font-size: 1.25rem;">Platform & Services Presentation</h3>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-<video controls preload="none" poster="/logo-ats.jpg" playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px; object-fit: cover;">
+<video controls preload="none" poster="" playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px; object-fit: cover;">
 <source src="VID-20261023-W0003-.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
