@@ -77,6 +77,8 @@ img{max-width:100%;height:auto}
 .hero-copy{contain:layout}
 .logo-frame{width:120px;height:120px;aspect-ratio:1/1;contain:layout paint;overflow:hidden}
 .logo-frame img{width:120px;height:120px;object-fit:contain;display:block}
+.promise-card{transition:transform .2s ease}
+.promise-card:hover{transform:translateY(-4px)}
 </style>
 </head>
 <body>
@@ -128,6 +130,7 @@ img{max-width:100%;height:auto}
 <nav class="desktop-nav" aria-label="Primary navigation">
 <a href="#about" data-i18n="nav.about">About us</a>
 <a href="#services" data-i18n="nav.services">Services</a>
+<a href="#promise" data-i18n="nav.promise">Our Promise</a>
 <a href="#work" data-i18n="nav.work">Our work</a>
 <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
 <a href="#videos" data-i18n="nav.videos">Videos</a>
@@ -254,6 +257,40 @@ img{max-width:100%;height:auto}
 <strong>PERKINS</strong><strong>CAT</strong><strong>CUMMINS</strong><strong>PORKKA</strong><strong>AUTOMATION SCADA</strong>
 </div>
 </section>
+
+<!-- ATS PROMISE - ADDED: Installation / Commissioning / After-Sales -->
+<section class="promise-section section-pad" id="promise" style="background:#0a2540; color:#fff;">
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
+    <span class="section-number">02.5 /</span>
+    <p class="section-kicker" data-i18n="promise.kicker" style="color:#f5b301;">WHY ATS ENG</p>
+    <h2 data-i18n="promise.title" style="font-size:38px; line-height:1.2; margin:15px 0;">From Installation to After-Sales, We Stay With You.</h2>
+    <p data-i18n="promise.lead" style="color:#cbd5e1; font-size:17px; line-height:1.7; max-width:800px; margin:0 auto 50px;">ATS ENG was built on field experience, not just sales. We have led installation, commissioning, and after-sales warranty for power and cold-chain systems across Sudan and the GCC.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; text-align:left;">
+      <div class="promise-card" style="background:#102f52; border:1px solid #1e4a7a; border-radius:16px; padding:28px;">
+        <div style="font-size:36px;">🔧</div>
+        <p data-i18n="promise.card1.num" style="color:#f5b301; font-weight:bold; margin:15px 0 5px;">01 — INSTALLATION</p>
+        <h3 data-i18n="promise.card1.title" style="font-size:22px; margin:0 0 10px; color:#fff;">Installation</h3>
+        <p data-i18n="promise.card1.body" style="color:#cbd5e1; line-height:1.7; font-size:15px; margin:0;">Professional on-site installation to international standards.</p>
+      </div>
+      <div class="promise-card" style="background:#102f52; border:1px solid #1e4a7a; border-radius:16px; padding:28px;">
+        <div style="font-size:36px;">⚡</div>
+        <p data-i18n="promise.card2.num" style="color:#f5b301; font-weight:bold; margin:15px 0 5px;">02 — COMMISSIONING</p>
+        <h3 data-i18n="promise.card2.title" style="font-size:22px; margin:0 0 10px; color:#fff;">Commissioning</h3>
+        <p data-i18n="promise.card2.body" style="color:#cbd5e1; line-height:1.7; font-size:15px; margin:0;">Testing, start-up and 100% working handover in front of you.</p>
+      </div>
+      <div class="promise-card" style="background:#f5b301; border-radius:16px; padding:28px; color:#0a2540;">
+        <div style="font-size:36px;">🛡️</div>
+        <p data-i18n="promise.card3.num" style="font-weight:bold; margin:15px 0 5px;">03 — WARRANTY & AFTER-SALES</p>
+        <h3 data-i18n="promise.card3.title" style="font-size:22px; margin:0 0 10px;">Warranty & After-Sales</h3>
+        <p data-i18n="promise.card3.body" style="line-height:1.7; font-size:15px; margin:0; color:#1a365d;">Real warranty, maintenance, spare parts, and fast response when it breaks.</p>
+      </div>
+    </div>
+    <p data-i18n="promise.footer" style="margin-top:35px; font-size:16px; font-weight:bold;">When it matters, we are there. — ATS ENG</p>
+    <a class="button button-primary" href="#contact" style="margin-top:10px; display:inline-block;"><span data-i18n="common.discuss">Discuss a project</span> ↗</a>
+  </div>
+</section>
+<!-- END ATS PROMISE -->
+
 <section class="work section-pad dark-section" id="work">
 <div class="section-heading reveal">
 <div>
