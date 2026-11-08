@@ -81,7 +81,6 @@ img{max-width:100%;height:auto}
 .promise-card:hover{transform:translateY(-4px)}
 .fast-inquiry-box { background: rgba(0, 166, 81, 0.08); border: 1px solid rgba(0, 166, 81, 0.3); border-radius: 16px; padding: 24px; margin: 30px 0; }
 .fast-inquiry-box input, .fast-inquiry-box select { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 15px; }
-
 /* Ticker Animation CSS Optimization */
 .ticker { overflow: hidden; white-space: nowrap; }
 .ticker-track { display: inline-block; animation: tickerScroll 25s linear infinite; }
@@ -446,7 +445,6 @@ Your browser does not support the video tag.
 <h2 data-i18n="contact.title">Bring us the complex part.</h2>
 <p class="contact-lede" data-i18n="contact.lede">Tell us where the system is today and where it needs to go. We will bring the right people into the room.</p>
 </div>
-
 <!-- نموذج الإرسال السريع العالمي - محدث بالكامل (Required + Select Capacity + UTM Tracking + Bilingual placeholders) -->
 <div class="fast-inquiry-box">
   <h3 style="margin-top:0; color:#0a2540;" data-i18n="fast.inquiry.title">⚡ Global Instant Inquiry — Worldwide & GCC</h3>
@@ -466,7 +464,6 @@ Your browser does not support the video tag.
     <button type="submit" style="width:100%; background:#25D366; color:white; border:none; padding:12px; border-radius:8px; font-weight:bold; cursor:pointer;" data-i18n="fast.submit.btn">Send Inquiry via WhatsApp (1-Hour Response) ↗</button>
   </form>
 </div>
-
 <div class="contact-details">
 <a href="mailto:info@addomatrading.com">info@addomatrading.com ↗</a>
 <a href="tel:+249912544637">+249 912 544 637</a>
@@ -538,7 +535,6 @@ function loadYoutube(el){
   var id = el.getAttribute('data-video');
   el.innerHTML = '<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" title="YouTube video" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>';
 }
-
 // دالة الإرسال السريع لواتساب المحسنة بـ encodeURIComponent مرة واحدة مع UTM Parameters
 function sendFastWhatsApp(e){
   e.preventDefault();
@@ -550,8 +546,7 @@ function sendFastWhatsApp(e){
   const url = `https://wa.me/249922562846?text=${encodeURIComponent(msg)}&utm_source=website&utm_medium=instant_quote`;
   window.open(url, '_blank');
 }
-
-// Inline Lightweight Translation & Caching Engine (Replacing app.js dependency)
+// Inline Lightweight Translation & Caching Engine (Optimized with requestAnimationFrame to fix INP)
 let i18nNodes = null;
 function getCachedNodes() {
   if (!i18nNodes) {
@@ -559,7 +554,6 @@ function getCachedNodes() {
   }
   return i18nNodes;
 }
-
 const translations = {
   ar: {
     "banner.title": "🤖 ATS DocIntel GenAI - جديد!",
@@ -675,7 +669,6 @@ const translations = {
   },
   en: {}
 };
-
 function setLanguage(lang) {
   const html = document.documentElement;
   requestAnimationFrame(() => {
@@ -694,29 +687,28 @@ function setLanguage(lang) {
     }
   });
 }
-
 function translatePage(lang) {
-  const nodes = getCachedNodes();
-  nodes.forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (lang === 'ar' && translations.ar[key]) {
-      el.innerHTML = translations.ar[key];
-    } else if (lang === 'en' && el.dataset.originalText) {
-      el.innerHTML = el.dataset.originalText;
-    }
-  });
-
-  const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
-  placeholders.forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    if (lang === 'ar' && translations.ar[key]) {
-      el.setAttribute('placeholder', translations.ar[key]);
-    } else if (lang === 'en' && el.dataset.originalPlaceholder) {
-      el.setAttribute('placeholder', el.dataset.originalPlaceholder);
-    }
+  requestAnimationFrame(() => {
+    const nodes = getCachedNodes();
+    nodes.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (lang === 'ar' && translations.ar[key]) {
+        el.innerHTML = translations.ar[key];
+      } else if (lang === 'en' && el.dataset.originalText) {
+        el.innerHTML = el.dataset.originalText;
+      }
+    });
+    const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+    placeholders.forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (lang === 'ar' && translations.ar[key]) {
+        el.setAttribute('placeholder', translations.ar[key]);
+      } else if (lang === 'en' && el.dataset.originalPlaceholder) {
+        el.setAttribute('placeholder', el.dataset.originalPlaceholder);
+      }
+    });
   });
 }
-
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     if (!el.dataset.originalText) el.dataset.originalText = el.innerHTML;
@@ -724,10 +716,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     if (!el.dataset.originalPlaceholder) el.dataset.originalPlaceholder = el.getAttribute('placeholder');
   });
-
   const savedLang = localStorage.getItem('ats_lang') || 'en';
   if (savedLang === 'ar') setLanguage('ar');
-
   const langToggle = document.getElementById('langToggle');
   if (langToggle) {
     langToggle.addEventListener('click', () => {
@@ -737,7 +727,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
 function atsInitIdle(){
   if('requestIdleCallback' in window){
     requestIdleCallback(function(){}, {timeout:2000});
@@ -747,4 +736,3 @@ if(document.readyState==='complete'){ atsInitIdle(); } else { window.addEventLis
 </script>
 </body>
 </html>
-
