@@ -101,12 +101,15 @@ img{max-width:100%;height:auto}
 .video-facade img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
 .facade-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;background:#D9AA35;color:#071827;border-radius:50%;display:grid;place-items:center;font-size:20px;padding-left:3px}
 </style>
+
+<!-- البانر الأخضر الجديد مع وسوم الترجمة (data-i18n) -->
 <div style="background:linear-gradient(90deg,#00A651,#008a44);color:white;padding:24px 20px;text-align:center;margin:20px 0;border-radius:12px;font-family:sans-serif">
-  <h2 style="margin:0 0 8px;font-size:22px" data-i18n="banner.title">🤖 ATS DocIntel GenAI - NEW!</h2>
-  <p style="margin:0 0 14px;opacity:0.95;font-size:15px" data-i18n="banner.subtitle">Diagnose your generator fault in 30 seconds with AI</p>
-  <button onclick="openAtsPopup()" style="background:white;color:#00A651;padding:12px 32px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;font-size:16px;box-shadow:0 4px 12px rgba(0,0,0,0.15)" data-i18n="banner.btn">🚀 Try Now Free</button>
-  <p style="margin:10px 0 0;font-size:11px;opacity:0.8" data-i18n="banner.note">No registration - direct from site</p>
+  <h2 data-i18n="banner.title" style="margin:0 0 8px;font-size:22px">🤖 ATS DocIntel GenAI - NEW!</h2>
+  <p data-i18n="banner.sub" style="margin:0 0 14px;opacity:0.95;font-size:15px">Diagnose your generator fault in 30 seconds with AI</p>
+  <button data-i18n="banner.cta" onclick="openAtsPopup()" style="background:white;color:#00A651;padding:12px 32px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;font-size:16px;box-shadow:0 4px 12px rgba(0,0,0,0.15)">🚀 Try it now for free</button>
+  <p data-i18n="banner.note" style="margin:10px 0 0;font-size:11px;opacity:0.8">No sign-up - direct from the website</p>
 </div>
+
 <div id="ats-popup-overlay" onclick="if(event.target==this)this.classList.remove('active')">
   <div id="ats-popup-box">
     <div id="ats-popup-header">
@@ -160,7 +163,6 @@ img{max-width:100%;height:auto}
 <a class="button button-primary" href="#services"><span data-i18n="hero.primary">Explore our capabilities</span><span>↗</span></a>
 <a class="text-link" href="#work"><span data-i18n="hero.secondary">See selected work</span><span>↓</span></a>
 </div>
-<!-- تم الحفاظ على زر وحيد دقيق غير مكرر لـ DocIntel لتقليل INP وترشيد تجربة المستخدم -->
 <a class="app-hero-button" href="https://ats-docgen-ai-mmvq4yws2dqhuwhzktrhw8.streamlit.app/?utm_source=hero_button" target="_blank" rel="noopener noreferrer">
 <strong data-i18n="hero.appButton">Open ATS DocIntel GenAI</strong><span aria-hidden="true">↗</span>
 </a>
@@ -400,7 +402,6 @@ img{max-width:100%;height:auto}
 </div>
 <h3 style="color: #fff; margin-bottom: 15px; font-size: 1.25rem;">Platform & Services Presentation</h3>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-<!-- تمت إضافة poster="/poster-ats.jpg" لتسريع LCP ومنع تحميل أول فريم تلقائياً -->
 <video controls preload="none" poster="/poster-ats.jpg" playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px; object-fit: cover;">
 <source src="VID-20261023-W0003-.mp4" type="video/mp4">
 Your browser does not support the video tag.
@@ -445,7 +446,6 @@ Your browser does not support the video tag.
 <h2 data-i18n="contact.title">Bring us the complex part.</h2>
 <p class="contact-lede" data-i18n="contact.lede">Tell us where the system is today and where it needs to go. We will bring the right people into the room.</p>
 </div>
-<!-- نموذج الإرسال السريع العالمي - محدث بالكامل (Required + Select Capacity + UTM Tracking + Bilingual placeholders) -->
 <div class="fast-inquiry-box">
   <h3 style="margin-top:0; color:#0a2540;" data-i18n="fast.inquiry.title">⚡ Global Instant Inquiry — Worldwide & GCC</h3>
   <p style="font-size:14px; color:#555;" data-i18n="fast.inquiry.subtitle">Enter your details below to instantly open WhatsApp with our engineering team (Response within 1 hour):</p>
@@ -535,7 +535,6 @@ function loadYoutube(el){
   var id = el.getAttribute('data-video');
   el.innerHTML = '<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" title="YouTube video" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>';
 }
-// دالة الإرسال السريع لواتساب المحسنة بـ encodeURIComponent مرة واحدة مع UTM Parameters
 function sendFastWhatsApp(e){
   e.preventDefault();
   var name = document.getElementById('fastName').value;
@@ -546,7 +545,6 @@ function sendFastWhatsApp(e){
   const url = `https://wa.me/249922562846?text=${encodeURIComponent(msg)}&utm_source=website&utm_medium=instant_quote`;
   window.open(url, '_blank');
 }
-// Inline Lightweight Translation & Caching Engine (Optimized with requestAnimationFrame to fix INP)
 let i18nNodes = null;
 function getCachedNodes() {
   if (!i18nNodes) {
@@ -557,8 +555,8 @@ function getCachedNodes() {
 const translations = {
   ar: {
     "banner.title": "🤖 ATS DocIntel GenAI - جديد!",
-    "banner.subtitle": "شخّص عطل مولدك في 30 ثانية بالذكاء الاصطناعي",
-    "banner.btn": "🚀 جرّب الآن مجاناً",
+    "banner.sub": "شخّص عطل مولدك في 30 ثانية بالذكاء الاصطناعي",
+    "banner.cta": "🚀 جرّب الآن مجاناً",
     "banner.note": "بدون تسجيل - مباشر من الموقع",
     "popup.full": "فتح في صفحة كاملة",
     "popup.close": "إغلاق",
