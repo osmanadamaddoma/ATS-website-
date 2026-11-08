@@ -10,6 +10,11 @@ const translations = {
     "nav.contact": "Contact",
     "nav.docintel": "ATS DocIntel GenAI ↗",
     "nav.cta": "Start a conversation",
+    // --- NEW: DocIntel Banner ---
+    "banner.title": "🤖 ATS DocIntel GenAI - NEW!",
+    "banner.sub": "Diagnose your generator fault in 30 seconds with AI",
+    "banner.cta": "🚀 Try it now for free",
+    "banner.note": "No sign-up - direct from the website",
     "hero.eyebrow": "INDUSTRIAL INTELLIGENCE / OMDURMAN → GCC",
     "hero.title": "Engineering the systems that keep progress moving.",
     "hero.lede": "ATS brings engineering, automation, dependable power and generative intelligence into one operating partner for modern industry.",
@@ -112,6 +117,11 @@ const translations = {
     "nav.contact": "تواصل معنا",
     "nav.docintel": "ATS DocIntel GenAI ↗",
     "nav.cta": "ابدأ محادثة",
+    // --- NEW: بانر DocIntel ---
+    "banner.title": "🤖 ATS DocIntel GenAI - جديد!",
+    "banner.sub": "شخّص عطل مولدك في 30 ثانية بالذكاء الاصطناعي",
+    "banner.cta": "🚀 جرّب الآن مجاناً",
+    "banner.note": "بدون تسجيل - مباشر من الموقع",
     "hero.eyebrow": "ذكاء صناعي / أم درمان ← الخليج",
     "hero.title": "نهندس الأنظمة التي تحافظ على استمرار التقدم.",
     "hero.lede": "ATS تجمع بين الهندسة والأتمتة والطاقة الموثوقة والذكاء التوليدي في شريك تشغيلي واحد للصناعة الحديثة.",
