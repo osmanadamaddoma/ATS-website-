@@ -10,23 +10,8 @@
 <title>ATS ENG | Industrial Generators & Cold Rooms | Global / GCC</title>
 <meta name="description" content="ATS ENG - Industrial Generators & Cold Rooms Worldwide & GCC. ADDOMA TRADING SERVICES delivers engineering, power, refrigeration, SCADA and predictive maintenance solutions.">
 <meta name="keywords" content="ATS ENG, Industrial Generators, Cold Rooms, Global engineering, diesel generators, Porkka, SCADA, predictive maintenance, AI, asset management">
-<link rel="preload" as="image" href="/logo-ats.jpg" fetchpriority="high">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ats-website-eot.pages.dev/?utm_source=facebook&utm_medium=og_share">
-<meta property="og:site_name" content="ADDOMA TRADING SERVICES">
-<meta property="og:title" content="ATS ENG | Industrial Generators & Cold Rooms | Global / GCC">
-<meta property="og:description" content="ATS ENG - Industrial Generators & Cold Rooms Worldwide & GCC. Engineering, power, refrigeration, SCADA and predictive maintenance solutions.">
-<meta property="og:image" content="https://ats-website-eot.pages.dev/og-cover.jpg">
-<meta property="og:image:secure_url" content="https://ats-website-eot.pages.dev/og-cover.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="ATS ENG - Industrial Generators & Cold Rooms">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ATS ENG | Industrial Generators & Cold Rooms">
-<meta name="twitter:description" content="Industrial Generators & Cold Rooms Worldwide & GCC. Power, refrigeration, SCADA and predictive maintenance.">
-<meta name="twitter:image" content="https://ats-website-eot.pages.dev/og-cover.jpg">
+<!-- إصلاح LCP: preload للوجو والpreconnect لخطوط جوجل -->
+<link rel="preload" href="/logo-ats.jpg" as="image" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -79,7 +64,7 @@ img{max-width:100%;height:auto}
 .logo-frame img{width:120px;height:120px;object-fit:contain;display:block}
 .promise-card{transition:transform .2s ease}
 .promise-card:hover{transform:translateY(-4px)}
-.fast-inquiry-box { background: rgba(0, 166, 81, 0.08); border: 1px solid rgba(0, 166, 81, 0.3); border-radius: 16px; padding: 24px; margin: 30px 0; }
+.fast-inquiry-box { background: rgba(0, 166, 81, 0.08); border: 1px solid rgba(0, 166, 81, 0.3); border-radius: 16px; padding: 24px; margin: 30px 0; min-height: 380px; }
 .fast-inquiry-box input, .fast-inquiry-box select { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 15px; }
 /* Ticker Animation CSS Optimization */
 .ticker { overflow: hidden; white-space: nowrap; }
@@ -88,20 +73,7 @@ img{max-width:100%;height:auto}
 </style>
 </head>
 <body>
-<style>
-#ats-popup-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:99999;align-items:center;justify-content:center;padding:12px}
-#ats-popup-overlay.active{display:flex}
-#ats-popup-box{background:white;border-radius:16px;max-width:520px;width:100%;padding:0;overflow:hidden;animation:popIn 0.3s ease;max-height:90vh;display:flex;flex-direction:column}
-@keyframes popIn{from{transform:scale(0.9);opacity:0}to{transform:scale(1);opacity:1}}
-#ats-popup-header{background:linear-gradient(90deg,#00A651,#008a44);color:white;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
-#ats-popup-body{padding:0;overflow:auto}
-#ats-iframe{width:100%;height:520px;border:none}
-#ats-popup-close{background:rgba(255,255,255,0.2);border:none;color:white;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px}
-.video-facade{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000;cursor:pointer;contain:layout paint}
-.video-facade img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
-.facade-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;background:#D9AA35;color:#071827;border-radius:50%;display:grid;place-items:center;font-size:20px;padding-left:3px}
-</style>
-
+<!-- تم نقل الأنماط الخاصة بالبوب أب إلى styles.css وحذفها من هنا لمنع إعادة التخطيط وابطاء لينكات التواصل (CLS & INP Fix) -->
 <!-- البانر الأخضر الجديد مع وسوم الترجمة (data-i18n) -->
 <div style="background:linear-gradient(90deg,#00A651,#008a44);color:white;padding:24px 20px;text-align:center;margin:20px 0;border-radius:12px;font-family:sans-serif">
   <h2 data-i18n="banner.title" style="margin:0 0 8px;font-size:22px">🤖 ATS DocIntel GenAI - NEW!</h2>
@@ -109,7 +81,6 @@ img{max-width:100%;height:auto}
   <button data-i18n="banner.cta" onclick="openAtsPopup()" style="background:white;color:#00A651;padding:12px 32px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;font-size:16px;box-shadow:0 4px 12px rgba(0,0,0,0.15)">🚀 Try it now for free</button>
   <p data-i18n="banner.note" style="margin:10px 0 0;font-size:11px;opacity:0.8">No sign-up - direct from the website</p>
 </div>
-
 <div id="ats-popup-overlay" onclick="if(event.target==this)this.classList.remove('active')">
   <div id="ats-popup-box">
     <div id="ats-popup-header">
@@ -305,7 +276,8 @@ img{max-width:100%;height:auto}
 <div class="work-index">01</div>
 <div class="work-main">
 <div class="work-visual project-photo">
-<img src="/FB_IMG_1597130599004.jpg" alt="ARD project image 1" loading="lazy" decoding="async" width="800" height="600" />
+<!-- إصلاح CLS: إضافة aspect-ratio وحجم صريح للصور -->
+<img src="/FB_IMG_1597130599004.jpg" alt="ARD project image 1" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
 <span class="visual-label">ARD / SOUTH SUDAN</span>
 <span class="visual-code">ATS—PWR—001</span>
 </div>
@@ -315,8 +287,8 @@ img{max-width:100%;height:auto}
 <p data-i18n="work.item1.body">Generator strategy, installation support and maintenance logic designed around the cost of interruption.</p>
 <div class="tag-row"><span>Perkins</span><span>CAT</span><span>24/7 uptime</span></div>
 <div class="project-thumbs">
-<img src="/FB_IMG_1597130599004.jpg" alt="ARD project image 1" loading="lazy" decoding="async" width="400" height="300" />
-<img src="/IMG-20261016-WA1422.jpg" alt="ARD project image 2" loading="lazy" decoding="async" width="400" height="300" />
+<img src="/FB_IMG_1597130599004.jpg" alt="ARD project image 1" loading="lazy" decoding="async" width="400" height="300" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
+<img src="/IMG-20261016-WA1422.jpg" alt="ARD project image 2" loading="lazy" decoding="async" width="400" height="300" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
 </div>
 </div>
 </div>
@@ -325,7 +297,7 @@ img{max-width:100%;height:auto}
 <div class="work-index">02</div>
 <div class="work-main">
 <div class="work-visual project-photo">
-<img src="/Petrofac-Kuwait-2018-01-jpg.jpg" alt="Petrofac Kuwait project" loading="lazy" decoding="async" width="800" height="600" />
+<img src="/Petrofac-Kuwait-2018-01-jpg.jpg" alt="Petrofac Kuwait project" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
 <span class="visual-label">PETROFAC / KUWAIT</span>
 <span class="visual-code">ATS—CLD—002</span>
 </div>
@@ -335,9 +307,9 @@ img{max-width:100%;height:auto}
 <p data-i18n="work.item2.body">Cold rooms and freezer systems specified for stability, traceability and dependable product protection.</p>
 <div class="tag-row"><span>Porkka</span><span>Monitoring</span><span>Precision</span></div>
 <div class="project-thumbs">
-<img src="/20180517_104007.jpg" alt="Petrofac project image 1" loading="lazy" decoding="async" width="400" height="300" />
-<img src="/FB_IMG_15283509045889598.jpg" alt="Petrofac project image 2" loading="lazy" decoding="async" width="400" height="300" />
-<img src="/Petrofac-Kuwait-2018-02-jpg.jpg" alt="Petrofac project image 4" loading="lazy" decoding="async" width="400" height="300" />
+<img src="/20180517_104007.jpg" alt="Petrofac project image 1" loading="lazy" decoding="async" width="400" height="300" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
+<img src="/FB_IMG_15283509045889598.jpg" alt="Petrofac project image 2" loading="lazy" decoding="async" width="400" height="300" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
+<img src="/Petrofac-Kuwait-2018-02-jpg.jpg" alt="Petrofac project image 4" loading="lazy" decoding="async" width="400" height="300" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
 </div>
 </div>
 </div>
@@ -346,7 +318,7 @@ img{max-width:100%;height:auto}
 <div class="work-index">03</div>
 <div class="work-main">
 <div class="work-visual project-photo">
-<img src="/FB_IMG_1792165086341.jpg" alt="UNICEF vaccine storage cold room in Sudan" loading="lazy" decoding="async" width="800" height="600" />
+<img src="/FB_IMG_1792165086341.jpg" alt="UNICEF vaccine storage cold room in Sudan" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
 <span class="visual-label">UNICEF / SUDAN</span>
 <span class="visual-code">ATS—AI—003</span>
 </div>
@@ -356,10 +328,10 @@ img{max-width:100%;height:auto}
 <p data-i18n="work.item3.body">Predictive maintenance concepts that help teams move from reacting to anticipating.</p>
 <div class="tag-row"><span>IoT</span><span>SCADA</span><span>Predictive</span></div>
 <div class="project-thumbs">
-<img src="/FB_IMG_1792165086341.jpg" alt="UNICEF project image 1" loading="lazy" decoding="async" width="400" height="300" />
-<img src="/IMG_20221113_125031.jpg" alt="UNICEF project image 2" loading="lazy" decoding="async" width="400" height="300" />
-<img src="/IMG_20221116_133633.jpg" alt="UNICEF project image 3" loading="lazy" decoding="async" width="400" height="300" />
-<img src="/IMG_20221117_101715.jpg" alt="UNICEF project image 4" loading="lazy" decoding="async" width="400" height="300" />
+<img src="/FB_IMG_1792165086341.jpg" alt="UNICEF project image 1" loading="lazy" decoding="async" width="400" height="300" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
+<img src="/IMG_20221113_125031.jpg" alt="UNICEF project image 2" loading="lazy" decoding="async" width="400" height="300" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
+<img src="/IMG_20221116_133633.jpg" alt="UNICEF project image 3" loading="lazy" decoding="async" width="400" height="300" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
+<img src="/IMG_20221117_101715.jpg" alt="UNICEF project image 4" loading="lazy" decoding="async" width="400" height="300" style="aspect-ratio: 4/3; width: 100%; height: auto;" />
 </div>
 </div>
 </div>
@@ -376,14 +348,15 @@ img{max-width:100%;height:auto}
 <p class="heading-note" data-i18n="gallery.note">A living archive for installations, equipment and the people who make systems work.</p>
 </div>
 <div class="gallery-grid">
-<button class="gallery-item gallery-large reveal" data-image="image:FB_IMG_1597130599004.jpg" type="button"><img src="/FB_IMG_1597130599004.jpg" alt="ARD power project in South Sudan" loading="lazy" decoding="async" width="800" height="600" /><span class="gallery-overlay"><b>ARD / SOUTH SUDAN</b><small data-i18n="gallery.open">Open image</small></span></button>
-<button class="gallery-item gallery-tall reveal reveal-delay" data-image="image:Petrofac-Kuwait-2018-02-jpg.jpg" type="button"><img src="/Petrofac-Kuwait-2018-02-jpg.jpg" alt="Petrofac Kuwait project" loading="lazy" decoding="async" width="800" height="600" /><span class="gallery-overlay"><b>PETROFAC / KUWAIT</b><small data-i18n="gallery.open">Open image</small></span></button>
-<button class="gallery-item reveal reveal-delay-2" data-image="image:IMG_20221113_125031.jpg" type="button"><img src="/IMG_20221113_125031.jpg" alt="UNICEF vaccine storage cold room in Sudan" loading="lazy" decoding="async" width="800" height="600" /><span class="gallery-overlay"><b>UNICEF / SUDAN</b><small data-i18n="gallery.open">Open image</small></span></button>
-<button class="gallery-item reveal" data-image="image:FB_IMG_1792165104212.jpg" type="button"><img src="/FB_IMG_1792165104212.jpg" alt="ATS field work" loading="lazy" decoding="async" width="800" height="600" /><span class="gallery-overlay"><b>ATS / FIELD WORK</b><small data-i18n="gallery.open">Open image</small></span></button>
-<button class="gallery-item reveal" data-image="image:FB_IMG_1792183890117.jpg" type="button"><img src="/FB_IMG_1792183890117.jpg" alt="ATS field work 2" loading="lazy" decoding="async" width="800" height="600" /><span class="gallery-overlay"><b>ATS / FIELD WORK 02</b><small data-i18n="gallery.open">Open image</small></span></button>
-<button class="gallery-item reveal" data-image="image:IMG-20261013-WA1289.jpg" type="button"><img src="/IMG-20261013-WA1289.jpg" alt="ATS engineering work" loading="lazy" decoding="async" width="800" height="600" /><span class="gallery-overlay"><b>ATS / ENGINEERING</b><small data-i18n="gallery.open">Open image</small></span></button>
-<button class="gallery-item reveal" data-image="image:IMG-20261013-WA5197.jpg" type="button"><img src="/IMG-20261013-WA5197.jpg" alt="ATS technical work" loading="lazy" decoding="async" width="800" height="600" /><span class="gallery-overlay"><b>ATS / TECHNICAL WORK</b><small data-i18n="gallery.open">Open image</small></span></button>
-<button class="gallery-item reveal" data-image="image:IMG-20261014-WA4675.jpg" type="button"><img src="/IMG-20261014-WA4675.jpg" alt="ATS project site" loading="lazy" decoding="async" width="800" height="600" /><span class="gallery-overlay"><b>ATS / PROJECT SITE</b><small data-i18n="gallery.open">Open image</small></span></button>
+<!-- إصلاح CLS: إضافة aspect-ratio وحجم صريح لصور المعرض -->
+<button class="gallery-item gallery-large reveal" data-image="image:FB_IMG_1597130599004.jpg" type="button"><img src="/FB_IMG_1597130599004.jpg" alt="ARD power project in South Sudan" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" /><span class="gallery-overlay"><b>ARD / SOUTH SUDAN</b><small data-i18n="gallery.open">Open image</small></span></button>
+<button class="gallery-item gallery-tall reveal reveal-delay" data-image="image:Petrofac-Kuwait-2018-02-jpg.jpg" type="button"><img src="/Petrofac-Kuwait-2018-02-jpg.jpg" alt="Petrofac Kuwait project" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" /><span class="gallery-overlay"><b>PETROFAC / KUWAIT</b><small data-i18n="gallery.open">Open image</small></span></button>
+<button class="gallery-item reveal reveal-delay-2" data-image="image:IMG_20221113_125031.jpg" type="button"><img src="/IMG_20221113_125031.jpg" alt="UNICEF vaccine storage cold room in Sudan" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" /><span class="gallery-overlay"><b>UNICEF / SUDAN</b><small data-i18n="gallery.open">Open image</small></span></button>
+<button class="gallery-item reveal" data-image="image:FB_IMG_1792165104212.jpg" type="button"><img src="/FB_IMG_1792165104212.jpg" alt="ATS field work" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" /><span class="gallery-overlay"><b>ATS / FIELD WORK</b><small data-i18n="gallery.open">Open image</small></span></button>
+<button class="gallery-item reveal" data-image="image:FB_IMG_1792183890117.jpg" type="button"><img src="/FB_IMG_1792183890117.jpg" alt="ATS field work 2" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" /><span class="gallery-overlay"><b>ATS / FIELD WORK 02</b><small data-i18n="gallery.open">Open image</small></span></button>
+<button class="gallery-item reveal" data-image="image:IMG-20261013-WA1289.jpg" type="button"><img src="/IMG-20261013-WA1289.jpg" alt="ATS engineering work" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" /><span class="gallery-overlay"><b>ATS / ENGINEERING</b><small data-i18n="gallery.open">Open image</small></span></button>
+<button class="gallery-item reveal" data-image="image:IMG-20261013-WA5197.jpg" type="button"><img src="/IMG-20261013-WA5197.jpg" alt="ATS technical work" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" /><span class="gallery-overlay"><b>ATS / TECHNICAL WORK</b><small data-i18n="gallery.open">Open image</small></span></button>
+<button class="gallery-item reveal" data-image="image:IMG-20261014-WA4675.jpg" type="button"><img src="/IMG-20261014-WA4675.jpg" alt="ATS project site" loading="lazy" decoding="async" width="800" height="600" style="aspect-ratio: 4/3; width: 100%; height: auto;" /><span class="gallery-overlay"><b>ATS / PROJECT SITE</b><small data-i18n="gallery.open">Open image</small></span></button>
 </div>
 </section>
 <section class="videos section-pad dark-section" id="videos">
@@ -395,7 +368,7 @@ img{max-width:100%;height:auto}
 </div>
 <p class="heading-note" data-i18n="videos.note">Add your company films, site tours and technical explainers here.</p>
 </div>
-<div class="featured-direct-video reveal" style="margin-bottom: 40px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px;">
+<div class="featured-direct-video reveal" style="margin-bottom: 40px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px; min-height: 420px;">
 <div style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;">
 <span style="color: #38bdf8; font-size: 0.85rem; font-weight: 700; letter-spacing: 1px;">DIRECT SITE BROADCAST</span>
 <span style="color: #94a3b8; font-size: 0.85rem;">VID-20261023-W0003-.mp4</span>
@@ -408,7 +381,8 @@ Your browser does not support the video tag.
 </video>
 </div>
 </div>
-<div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+<!-- إصلاح CLS: حجز min-height للـ video-grid -->
+<div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; min-height: 320px;">
 <div class="video-embed-card reveal" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px;">
 <div class="video-facade" data-video="PLAllvODgFU" onclick="loadYoutube(this)" style="margin-bottom: 12px;">
   <img src="https://i.ytimg.com/vi/PLAllvODgFU/hqdefault.jpg" alt="System & Operations Overview" loading="lazy" decoding="async" width="640" height="360">
@@ -545,7 +519,8 @@ function sendFastWhatsApp(e){
   const url = `https://wa.me/249922562846?text=${encodeURIComponent(msg)}&utm_source=website&utm_medium=instant_quote`;
   window.open(url, '_blank');
 }
-// تحسين محرك الترجمة وخفض الـ INP باستخدام requestAnimationFrame والتخزين المحلي
+
+// تحسين محرك الترجمة وخفض الـ INP (إصلاح INP بتقسيم الشغل على دفعات وتجنب innerHTML المفرط)
 let i18nNodes = null;
 function getCachedNodes() {
   if (!i18nNodes) {
@@ -553,6 +528,8 @@ function getCachedNodes() {
   }
   return i18nNodes;
 }
+let isTranslating = false;
+
 const translations = {
   ar: {
     "banner.title": "🤖 ATS DocIntel GenAI - جديد!",
@@ -668,51 +645,54 @@ const translations = {
   },
   en: {}
 };
+
 function setLanguage(lang) {
+  if (isTranslating) return;
+  isTranslating = true;
   const html = document.documentElement;
-  requestAnimationFrame(() => {
-    if (lang === 'ar') {
-      html.setAttribute('dir', 'rtl');
-      html.setAttribute('lang', 'ar');
-      const toggleBtn = document.getElementById('langToggle');
-      if(toggleBtn) toggleBtn.textContent = 'English';
-      translatePage('ar');
-      localStorage.setItem('ats_lang', 'ar');
+  html.lang = lang;
+  html.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  const toggleBtn = document.getElementById('langToggle');
+  if(toggleBtn) toggleBtn.textContent = lang === 'ar' ? 'English' : 'عربي';
+  localStorage.setItem('ats_lang', lang);
+
+  // تقسيم الترجمة على دفعات باستخدام requestAnimationFrame لكي يتنفس المتصفح وينخفض الـ INP
+  const nodes = getCachedNodes();
+  let i = 0;
+  function chunk() {
+    const end = Math.min(i + 20, nodes.length);
+    for (; i < end; i++) {
+      const el = nodes[i];
+      const key = el.getAttribute('data-i18n');
+      if (lang === 'ar' && translations.ar[key]) {
+        el.textContent = translations.ar[key];
+      } else if (lang === 'en' && el.dataset.originalText) {
+        el.textContent = el.dataset.originalText;
+      }
+    }
+    if (i < nodes.length) {
+      requestAnimationFrame(chunk);
     } else {
-      html.setAttribute('dir', 'ltr');
-      html.setAttribute('lang', 'en');
-      const toggleBtn = document.getElementById('langToggle');
-      if(toggleBtn) toggleBtn.textContent = 'عربي';
-      translatePage('en');
-      localStorage.setItem('ats_lang', 'en');
+      isTranslating = false;
+    }
+  }
+  requestAnimationFrame(chunk);
+
+  // ترجمة الـ placeholders أيضاً
+  const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+  placeholders.forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (lang === 'ar' && translations.ar[key]) {
+      el.setAttribute('placeholder', translations.ar[key]);
+    } else if (lang === 'en' && el.dataset.originalPlaceholder) {
+      el.setAttribute('placeholder', el.dataset.originalPlaceholder);
     }
   });
 }
-function translatePage(lang) {
-  requestAnimationFrame(() => {
-    const nodes = getCachedNodes();
-    nodes.forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (lang === 'ar' && translations.ar[key]) {
-        el.innerHTML = translations.ar[key];
-      } else if (lang === 'en' && el.dataset.originalText) {
-        el.innerHTML = el.dataset.originalText;
-      }
-    });
-    const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
-    placeholders.forEach(el => {
-      const key = el.getAttribute('data-i18n-placeholder');
-      if (lang === 'ar' && translations.ar[key]) {
-        el.setAttribute('placeholder', translations.ar[key]);
-      } else if (lang === 'en' && el.dataset.originalPlaceholder) {
-        el.setAttribute('placeholder', el.dataset.originalPlaceholder);
-      }
-    });
-  });
-}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    if (!el.dataset.originalText) el.dataset.originalText = el.innerHTML;
+    if (!el.dataset.originalText) el.dataset.originalText = el.textContent;
   });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     if (!el.dataset.originalPlaceholder) el.dataset.originalPlaceholder = el.getAttribute('placeholder');
@@ -728,6 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
 function atsInitIdle(){
   if('requestIdleCallback' in window){
     requestIdleCallback(function(){}, {timeout:2000});
