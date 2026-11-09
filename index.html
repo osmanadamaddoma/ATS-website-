@@ -545,6 +545,7 @@ function sendFastWhatsApp(e){
   const url = `https://wa.me/249922562846?text=${encodeURIComponent(msg)}&utm_source=website&utm_medium=instant_quote`;
   window.open(url, '_blank');
 }
+// تحسين محرك الترجمة وخفض الـ INP باستخدام requestAnimationFrame والتخزين المحلي
 let i18nNodes = null;
 function getCachedNodes() {
   if (!i18nNodes) {
@@ -673,13 +674,15 @@ function setLanguage(lang) {
     if (lang === 'ar') {
       html.setAttribute('dir', 'rtl');
       html.setAttribute('lang', 'ar');
-      document.getElementById('langToggle').textContent = 'English';
+      const toggleBtn = document.getElementById('langToggle');
+      if(toggleBtn) toggleBtn.textContent = 'English';
       translatePage('ar');
       localStorage.setItem('ats_lang', 'ar');
     } else {
       html.setAttribute('dir', 'ltr');
       html.setAttribute('lang', 'en');
-      document.getElementById('langToggle').textContent = 'عربي';
+      const toggleBtn = document.getElementById('langToggle');
+      if(toggleBtn) toggleBtn.textContent = 'عربي';
       translatePage('en');
       localStorage.setItem('ats_lang', 'en');
     }
