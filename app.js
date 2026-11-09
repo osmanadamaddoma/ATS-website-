@@ -1,6 +1,13 @@
-// ATS ENG - Fast Language Toggle + Fixed INP
+// ATS ENG - Optimized Fast Language Toggle + Fixed INP & Performance Suite
 const translations = {
   en: {
+    "banner.title": "🤖 ATS DocIntel GenAI - NEW!",
+    "banner.sub": "Diagnose your generator fault in 30 seconds with AI",
+    "banner.cta": "🚀 Try it now for free",
+    "banner.note": "No sign-up - direct from the website",
+    "popup.full": "Open in Full Page",
+    "popup.close": "Close",
+    "call.now": "📞 Call / WhatsApp",
     "nav.about": "About us",
     "nav.services": "Services",
     "nav.promise": "Our Promise",
@@ -10,19 +17,12 @@ const translations = {
     "nav.contact": "Contact",
     "nav.docintel": "ATS DocIntel GenAI ↗",
     "nav.cta": "Start a conversation",
-    "banner.title": "🤖 ATS DocIntel GenAI - NEW!",
-    "banner.sub": "Diagnose your generator fault in 30 seconds with AI",
-    "banner.cta": "🚀 Try it now for free",
-    "banner.note": "No sign-up - direct from the website",
-    "hero.eyebrow": "INDUSTRIAL INTELLIGENCE / OMDURMAN → GCC",
+    "hero.eyebrow": "INDUSTRIAL INTELLIGENCE / GLOBAL → GCC",
     "hero.title": "Engineering the systems that keep progress moving.",
     "hero.lede": "ATS brings engineering, automation, dependable power and generative intelligence into one operating partner for modern industry.",
     "hero.primary": "Explore our capabilities",
     "hero.secondary": "See selected work",
     "hero.appButton": "Open ATS DocIntel GenAI",
-    "hero.appKicker": "ATS DOCINTEL GENAI",
-    "hero.appLink": "Open the AI document application",
-    "hero.appDescription": "An AI-assisted document intelligence tool for exploring files, extracting useful information and turning scattered evidence into clearer decisions.",
     "hero.metric1": "operating pillars",
     "hero.metric2": "reliability mindset",
     "hero.metric3": "ready for what is next",
@@ -41,22 +41,22 @@ const translations = {
     "services.kicker": "WHAT WE DO",
     "services.title": "Capability with a point of view.",
     "services.note": "Integrated thinking across the systems that matter most.",
-    "services.partners": "TECHNOLOGY & BRAND ECOSYSTEM",
-    "service.engineering.title": "Engineering & technical works",
+    "service.engineering.title": "Engineering &<br />technical works",
     "service.engineering.body": "Mechanical engineering, facilities and project delivery built around real operating conditions.",
-    "service.digital.title": "Programming & information systems",
+    "service.digital.title": "Programming &<br />information systems",
     "service.digital.body": "Connected software, automation and SCADA systems that make critical information useful.",
-    "service.power.title": "Power, diesel & asset management",
+    "service.power.title": "Power, diesel &<br />asset management",
     "service.power.body": "Generators, maintenance strategies and asset decisions that protect continuity.",
-    "service.ai.title": "Generative AI & predictive maintenance",
+    "service.ai.title": "Generative AI &<br />predictive maintenance",
     "service.ai.body": "Turn operational signals into earlier, smarter action.",
-    "service.cold.title": "Cold rooms & freezer systems",
+    "service.cold.title": "Cold rooms &<br />freezer systems",
     "service.cold.body": "World-class cold-chain environments featuring Porkka and proven controls.",
-    "service.consulting.title": "Advisory & technical consulting",
+    "service.consulting.title": "Advisory &<br />technical consulting",
     "service.consulting.body": "A senior perspective for complex decisions, investments and operational change.",
+    "services.partners": "TECHNOLOGY & BRAND ECOSYSTEM",
     "promise.kicker": "WHY ATS ENG",
     "promise.title": "From Installation to After-Sales, We Stay With You.",
-    "promise.lead": "ATS ENG was built on field experience, not just sales. We have led installation, commissioning, and after-sales warranty for power and cold-chain systems across Sudan and the GCC.",
+    "promise.lead": "ATS ENG was built on field experience, not just sales. We have led installation, commissioning, and after-sales warranty for power and cold-chain systems worldwide and across the GCC.",
     "promise.card1.num": "01 — INSTALLATION",
     "promise.card1.title": "Installation",
     "promise.card1.body": "Professional on-site installation to international standards.",
@@ -67,7 +67,6 @@ const translations = {
     "promise.card3.title": "Warranty & After-Sales",
     "promise.card3.body": "Real warranty, maintenance, spare parts, and fast response when it breaks.",
     "promise.footer": "When it matters, we are there. — ATS ENG",
-    "common.discuss": "Discuss a project",
     "work.kicker": "SELECTED WORK",
     "work.title": "From concept to continuity.",
     "work.link": "Tell us what you are building",
@@ -90,7 +89,7 @@ const translations = {
     "contact.kicker": "LET'S MAKE IT WORK",
     "contact.title": "Bring us the complex part.",
     "contact.lede": "Tell us where the system is today and where it needs to go. We will bring the right people into the room.",
-    "contact.location": "Freedom Street · Khartoum, Sudan",
+    "contact.location": "Freedom Street · Khartoum, Sudan & International",
     "contact.hours": "Sunday–Thursday · 8:00 AM–4:00 PM",
     "form.name": "Your name",
     "form.email": "Work email",
@@ -104,165 +103,189 @@ const translations = {
     "form.submit": "Send enquiry",
     "footer.tag": "Industrial Intelligence Suite",
     "footer.rights": "Built for the field.",
-    "footer.top": "Back to top ↑"
+    "footer.top": "Back to top ↑",
+    "common.discuss": "Discuss a project",
+    "fast.inquiry.title": "⚡ Global Instant Inquiry — Worldwide & GCC",
+    "fast.inquiry.subtitle": "Enter your details below to instantly open WhatsApp with our engineering team (Response within 1 hour):",
+    "fast.placeholder.name": "Your Name / Company Name",
+    "fast.placeholder.city": "Your Country / City (e.g., Dubai, Riyadh, London, Khartoum)",
+    "fast.capacity.select": "Select Required Capacity / Solution",
+    "fast.submit.btn": "Send Inquiry via WhatsApp (1-Hour Response) ↗"
   },
   ar: {
-    "nav.about": "من نحن",
-    "nav.services": "خدماتنا",
-    "nav.promise": "وعدنا",
-    "nav.work": "أعمالنا",
-    "nav.gallery": "المعرض",
-    "nav.videos": "الفيديوهات",
-    "nav.contact": "تواصل معنا",
-    "nav.docintel": "ATS DocIntel GenAI ↗",
-    "nav.cta": "ابدأ محادثة",
     "banner.title": "🤖 ATS DocIntel GenAI - جديد!",
     "banner.sub": "شخّص عطل مولدك في 30 ثانية بالذكاء الاصطناعي",
     "banner.cta": "🚀 جرّب الآن مجاناً",
     "banner.note": "بدون تسجيل - مباشر من الموقع",
-    "hero.eyebrow": "ذكاء صناعي / أم درمان ← الخليج",
-    "hero.title": "نهندس الأنظمة التي تحافظ على استمرار التقدم.",
-    "hero.lede": "ATS تجمع بين الهندسة والأتمتة والطاقة الموثوقة والذكاء التوليدي في شريك تشغيلي واحد للصناعة الحديثة.",
-    "hero.primary": "اكتشف قدراتنا",
+    "popup.full": "فتح في صفحة كاملة",
+    "popup.close": "إغلاق",
+    "call.now": "📞 اتصل / واتساب",
+    "nav.about": "من نحن",
+    "nav.services": "خدماتنا",
+    "nav.promise": "عهدنا",
+    "nav.work": "أعمالنا",
+    "nav.gallery": "المعرض",
+    "nav.videos": "فيديوهات",
+    "nav.contact": "اتصل بنا",
+    "nav.docintel": "ATS DocIntel GenAI ↗",
+    "nav.cta": "ابدأ محادثة",
+    "hero.eyebrow": "الذكاء الصناعي الهندسي / عالمياً ← الخليج",
+    "hero.title": "هندسة الأنظمة التي تبقي عجلة التقدم مستمرة.",
+    "hero.lede": "تقدم ATS الهندسة، الأتمتة، الطاقة المعتمدة، والذكاء التوليدي في شريك تشغيلي واحد للصناعة الحديثة.",
+    "hero.primary": "استكشف قدراتنا",
     "hero.secondary": "شاهد أعمالنا المختارة",
-    "hero.appButton": "افتح ATS DocIntel GenAI",
-    "hero.appKicker": "ATS DOCINTEL GENAI",
-    "hero.appLink": "افتح تطبيق مستندات الذكاء الاصطناعي",
-    "hero.appDescription": "أداة ذكاء اصطناعي لتحليل المستندات واستخراج المعلومات المفيدة وتحويل الأدلة المتناثرة إلى قرارات أوضح.",
-    "hero.metric1": "ركائز تشغيلية",
-    "hero.metric2": "عقلية الموثوقية 24/7",
-    "hero.metric3": "جاهزون للمستقبل",
+    "hero.appButton": "فتح نظام ATS DocIntel GenAI",
+    "hero.metric1": "أعمدة التشغيل",
+    "hero.metric2": "عقلية الاعتمادية",
+    "hero.metric3": "جاهز للمستقبل",
     "hero.panelTag": "ATS / ملاحظة ميدانية 001",
-    "hero.live": "أنظمة حية",
+    "hero.live": "أنظمة مباشرة",
     "hero.panelCaption": "حزمة الذكاء الصناعي",
     "hero.powerSmall": "أنظمة الطاقة",
     "hero.powerStrong": "تعمل دائماً.",
     "hero.dataSmall": "بيانات تنبؤية",
-    "hero.dataStrong": "شاهد مبكراً.",
-    "about.kicker": "منهج ATS",
-    "about.title": "جسر عملي بين الأفكار الجريئة والتشغيل الموثوق.",
-    "about.lead": "نصمم وندعم البنية التحتية وراء الأعمال الطموحة — من غرف الميكانيكا وبيئات التبريد إلى البرمجيات و SCADA وطبقة الذكاء التي تربطها.",
-    "about.body": "منهجنا واضح: نفهم واقع التشغيل، نجعل النظام مرئياً، ثم نحسّنه بالمزيج الصحيح من الانضباط الهندسي والتكنولوجيا الحديثة. النتيجة: تخمين أقل، وقت تشغيل أفضل، وقرارات تصمد في الميدان.",
-    "about.signature": "بُني للميدان. جاهز للمستقبل.",
-    "services.kicker": "ماذا نفعل",
-    "services.title": "قدرة بوجهة نظر.",
+    "hero.dataStrong": "اعرف باكراً.",
+    "about.kicker": "نهج ATS",
+    "about.title": "جسر عملي بين الأفكار الطموحة والتشغيل الموثوق.",
+    "about.lead": "نقوم بتصميم ودعم البنية التحتية للأعمال الطموحة - من غرف التبريد والطاقة إلى البرمجيات وأنظمة SCADA.",
+    "about.body": "نهجنا واضح: فهم الواقع التشغيلي، جعل النظام مرئياً، ثم تطويره بمزج الانضباط الهندسي والتكنولوجيا الحديثة لضمان استمرارية التشغيل.",
+    "about.signature": "مصمم للميدان. جاهز للمستقبل.",
+    "services.kicker": "ما نقوم به",
+    "services.title": "كفاءة برؤية واضحة.",
     "services.note": "تفكير متكامل عبر الأنظمة الأكثر أهمية.",
-    "services.partners": "منظومة التكنولوجيا والعلامات",
     "service.engineering.title": "الهندسة والأعمال الفنية",
-    "service.engineering.body": "هندسة ميكانيكية ومنشآت وتنفيذ مشاريع مبنية على ظروف التشغيل الحقيقية.",
+    "service.engineering.body": "هندسة ميكانيكية وتجهيز منشآت مصممة وفق ظروف التشغيل الواقعية.",
     "service.digital.title": "البرمجة وأنظمة المعلومات",
-    "service.digital.body": "برمجيات متصلة وأنظمة أتمتة و SCADA تجعل المعلومات الحرجة مفيدة.",
-    "service.power.title": "الطاقة والديزل وإدارة الأصول",
-    "service.power.body": "مولدات واستراتيجيات صيانة وقرارات أصول تحمي استمرارية العمل.",
-    "service.ai.title": "الذكاء التوليدي والصيانة التنبؤية",
-    "service.ai.body": "حوّل إشارات التشغيل إلى إجراءات مبكرة وأذكى.",
-    "service.cold.title": "غرف التبريد والتجميد",
-    "service.cold.body": "بيئات سلسلة تبريد عالمية المستوى تتميز بـ Porkka وضوابط مجربة.",
+    "service.digital.body": "برمجيات مترابطة، أتمتة وأنظمة SCADA لجعل البيانات الحيوية مفيدة.",
+    "service.power.title": "الطاقة، الديزل وإدارة الأصول",
+    "service.power.body": "مولدات، استراتيجيات صيانة وقرارات أصول تحمي استمرارية العمل.",
+    "service.ai.title": "الذكاء الاصطناعي والتنبؤ",
+    "service.ai.body": "تحويل إشارات التشغيل إلى إجراءات أسرع وأكثر ذكاءً.",
+    "service.cold.title": "غرف التبريد وأنظمة التجميد",
+    "service.cold.body": "بيئات سلسلة باردة عالمية المستوى تضم منتجات Porkka وتحكم مثالي.",
     "service.consulting.title": "الاستشارات الفنية",
-    "service.consulting.body": "منظور خبير للقرارات المعقدة والاستثمارات والتغيير التشغيلي.",
+    "service.consulting.body": "رؤية استشارية خبيرة للقرارات المعقدة والاستثمارات والتطوير التشغيلي.",
+    "services.partners": "منظومة العلامات التجارية والتقنية",
     "promise.kicker": "لماذا ATS ENG",
-    "promise.title": "من التركيب إلى ما بعد البيع، نحن معك.",
-    "promise.lead": "تم بناء ATS ENG على خبرة ميدانية، وليس على المبيعات فقط. لقد قدنا التركيب والتشغيل وخدمات ما بعد البيع لأنظمة الطاقة والتبريد في السودان ودول الخليج.",
+    "promise.title": "من التركيب إلى ما بعد البيع، نحن معك دائماً.",
+    "promise.lead": "تأسست ATS ENG على الخبرة الميدانية وليس المبيعات فقط. لقد قمنا بإدارة التركيب التشغيل وضمان ما بعد البيع للطاقة والتبريد عالمياً وفي الخليج.",
     "promise.card1.num": "01 — التركيب",
     "promise.card1.title": "التركيب",
     "promise.card1.body": "تركيب احترافي في الموقع وفق المعايير الدولية.",
-    "promise.card2.num": "02 — التشغيل",
+    "promise.card2.num": "02 — التشغيل والتسليم",
     "promise.card2.title": "التشغيل",
-    "promise.card2.body": "اختبار وتشغيل وتسليم يعمل 100% أمامك.",
-    "promise.card3.num": "03 — الضمان وخدمات ما بعد البيع",
+    "promise.card2.body": "الفحص، التشغيل والتسليم بنسبة 100% أمام عينيك.",
+    "promise.card3.num": "03 — الضمان ودعم ما بعد البيع",
     "promise.card3.title": "الضمان وما بعد البيع",
-    "promise.card3.body": "ضمان حقيقي، صيانة، قطع غيار، واستجابة سريعة عند العطل.",
-    "promise.footer": "عندما يهم الأمر، نحن هناك. — ATS ENG",
-    "common.discuss": "ناقش مشروعك",
+    "promise.card3.body": "ضمان حقيقي، صيانة، قطع غيار واستجابة سريعة عند حدوث أعطال.",
+    "promise.footer": "عندما يكون الأمر هاماً، تجدنا بجانبك. — ATS ENG",
     "work.kicker": "أعمال مختارة",
     "work.title": "من الفكرة إلى الاستمرارية.",
     "work.link": "أخبرنا بما تبنيه",
     "work.item1.type": "أنظمة الطاقة",
-    "work.item1.title": "توليد مرن للعمليات الحرجة.",
-    "work.item1.body": "استراتيجية مولدات ودعم تركيب ومنطق صيانة مصمم حول تكلفة التوقف.",
-    "work.item2.type": "هندسة سلسلة التبريد",
-    "work.item2.title": "بيئات خاضعة للتحكم بدون مجال للتنازل.",
-    "work.item2.body": "غرف تبريد وتجميد مصممة للاستقرار والتتبع وحماية موثوقة للمنتجات.",
-    "work.item3.type": "عمليات ذكية",
-    "work.item3.title": "إشارة أوضح داخل الأنظمة المعقدة.",
+    "work.item1.title": "توليد طاقة مرن للعمليات الحرجة.",
+    "work.item1.body": "استراتيجية مولدات، دعم تركيب وصيانة مصممة لتجنب التوقف.",
+    "work.item2.type": "هندسة التبريد",
+    "work.item2.title": "بيئات خاضعة للتحكم بدون تنازلات.",
+    "work.item2.body": "غرف تبريد وتجميد مصممة للاستقرار والموثوقية وحماية المنتجات.",
+    "work.item3.type": "العمليات الذكية",
+    "work.item3.title": "إشارة أكثر وضوحاً داخل الأنظمة المعقدة.",
     "work.item3.body": "مفاهيم صيانة تنبؤية تساعد الفرق على الانتقال من رد الفعل إلى الاستباق.",
     "gallery.kicker": "ملاحظات ميدانية",
-    "gallery.title": "العمل، في العالم الحقيقي.",
-    "gallery.note": "أرشيف حي للتركيبات والمعدات والأشخاص الذين يجعلون الأنظمة تعمل.",
-    "gallery.open": "افتح الصورة",
+    "gallery.title": "العمل في الواقع الحقيقي.",
+    "gallery.note": "أرشيف حي للتركيبات والمعدات ومن يصنعون الأنظمة.",
+    "gallery.open": "فتح الصورة",
     "videos.kicker": "شاهد النظام",
-    "videos.title": "الأفكار أفضل عندما تتحرك.",
-    "videos.note": "أضف أفلام الشركة وجولات الموقع وشروحاتك الفنية هنا.",
-    "contact.kicker": "لنجعلها تعمل",
+    "videos.title": "تكون الأفكار أفضل عندما تتحرك.",
+    "videos.note": "أضف أفلام شركتك والجولات الميدانية والشروحات التقنية هنا.",
+    "contact.kicker": "دعنا ننجز العمل",
     "contact.title": "أحضر لنا الجزء المعقد.",
-    "contact.lede": "أخبرنا أين النظام اليوم وأين يجب أن يذهب. سنحضر الأشخاص المناسبين.",
-    "contact.location": "شارع الحرية · الخرطوم، السودان",
+    "contact.lede": "أخبرنا اين يقف نظامك اليوم وإلى أاين يحتاج أن يصل. سنحضر الأشخاص المناسبين.",
+    "contact.location": "شارع الحرية · الخرطوم، السودان ودولي",
     "contact.hours": "الأحد - الخميس · 8:00 صباحاً - 4:00 عصراً",
     "form.name": "اسمك",
-    "form.email": "بريد العمل",
-    "form.subject": "كيف يمكننا المساعدة؟",
-    "form.option1": "الهندسة والأعمال الفنية",
+    "form.email": "البريد الإلكتروني للعمل",
+    "form.subject": "بماذا يمكننا مساعدتك؟",
+    "form.option1": "الأعمال الهندسية والفنية",
     "form.option2": "الطاقة والمولدات",
     "form.option3": "الأتمتة / SCADA",
     "form.option4": "الذكاء الاصطناعي والصيانة التنبؤية",
     "form.option5": "استفسار آخر",
-    "form.message": "سياق أكثر قليلاً",
-    "form.submit": "أرسل الاستفسار",
+    "form.message": "مزيد من التفاصيل",
+    "form.submit": "إرسال الاستفسار",
     "footer.tag": "حزمة الذكاء الصناعي",
-    "footer.rights": "بُني للميدان.",
-    "footer.top": "العودة للأعلى ↑"
+    "footer.rights": "مصمم للميدان.",
+    "footer.top": "العودة للأعلى ↑",
+    "common.discuss": "ناقش مشروعاً",
+    "fast.inquiry.title": "⚡ استفسار فوري عالمي - من جميع أنحاء العالم & الخليج",
+    "fast.inquiry.subtitle": "أدخل بياناتك لفتح واتساب مباشرة مع الفريق الهندسي (رد خلال ساعة):",
+    "fast.placeholder.name": "اسم العميل / الشركة",
+    "fast.placeholder.city": "دولتك / مدينتك (مثال: دبي، الرياض، لندن، الخرطوم)",
+    "fast.capacity.select": "اختر القدرة / الحل المطلوب",
+    "fast.submit.btn": "إرسال الطلب عبر واتساب (رد خلال ساعة) ↗"
   }
 };
 
-// Cache elements once - this fixes INP
-let cachedEls = null;
-function getEls(){
-  if(!cachedEls) cachedEls = Array.from(document.querySelectorAll('[data-i18n]'));
-  return cachedEls;
+// Cache elements once to optimize INP performance
+let cachedNodes = null;
+function getCachedNodes() {
+  if (!cachedNodes) {
+    cachedNodes = Array.from(document.querySelectorAll('[data-i18n]'));
+  }
+  return cachedNodes;
 }
 
-function getSavedLang(){
-  try{ return localStorage.getItem('ats-lang') || 'en'; }catch(e){ return 'en'; }
-}
-let currentLang = getSavedLang();
-let isTranslating = false;
-
-function applyLang(lang, save=true){
-  if(isTranslating) return;
-  isTranslating = true;
-  currentLang = lang;
-  if(save){ try{ localStorage.setItem('ats-lang', lang); }catch(e){} }
-  const dict = translations[lang];
-  const isAr = lang === 'ar';
-  requestAnimationFrame(()=>{
-    document.documentElement.lang = lang;
-    document.documentElement.dir = isAr ? 'rtl' : 'ltr';
-    const btn = document.getElementById('langToggle');
-    if(btn) btn.textContent = isAr ? 'EN' : 'عربي';
-    for(const el of getEls()){
-      const key = el.getAttribute('data-i18n');
-      const val = dict[key];
-      if(val) el.textContent = val;
+function setLanguage(lang) {
+  const html = document.documentElement;
+  requestAnimationFrame(() => {
+    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    html.setAttribute('lang', lang);
+    
+    const toggleBtn = document.getElementById('langToggle');
+    if (toggleBtn) {
+      toggleBtn.textContent = lang === 'ar' ? 'English' : 'عربي';
     }
-    isTranslating = false;
+    
+    const dict = translations[lang] || {};
+    getCachedNodes().forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) {
+        el.innerHTML = dict[key];
+      }
+    });
+
+    // Translate placeholders securely
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key]) {
+        el.setAttribute('placeholder', dict[key]);
+      }
+    });
+
+    try {
+      localStorage.setItem('ats_lang', lang);
+    } catch(e) {}
   });
 }
 
-document.addEventListener('DOMContentLoaded', ()=>{
-  applyLang(currentLang, false);
-  const btn = document.getElementById('langToggle');
-  if(btn){
-    btn.addEventListener('click', ()=>{
-      // Instant response - fixes INP 984ms -> <100ms
-      btn.style.opacity = '0.7';
-      setTimeout(()=>{ btn.style.opacity = '1'; }, 120);
-      applyLang(currentLang === 'en' ? 'ar' : 'en');
-    }, {passive:true});
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('ats_lang') || 'en';
+  if (savedLang === 'ar') {
+    setLanguage('ar');
   }
-  const menuBtn = document.getElementById('menuToggle');
-  if(menuBtn){
-    menuBtn.addEventListener('click', ()=>{
+
+  const langToggle = document.getElementById('langToggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      const currentLang = document.documentElement.getAttribute('lang') || 'en';
+      setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+    }, { passive: true });
+  }
+
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
       document.body.classList.toggle('menu-open');
-    }, {passive:true});
+    }, { passive: true });
   }
 });
