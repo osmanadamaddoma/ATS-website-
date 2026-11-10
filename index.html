@@ -58,7 +58,9 @@
 }
 </script>
 <style>
-.hero-visual{min-height:420px;contain:layout;position:relative}
+.hero-visual{min-height:420px;content-visibility:auto;position:relative}
+.hero-visual .logo-frame{width:120px;height:120px;}
+.hero-visual .floating-card, .hero-visual .reveal{animation:none !important;}
 .hero-orbit{position:absolute;width:220px;height:220px;aspect-ratio:1/1;contain:layout paint}
 .hero-orbit.orbit-one{top:0;right:0}
 .hero-orbit.orbit-two{bottom:0;left:0}
@@ -81,6 +83,9 @@ img{max-width:100%;height:auto}
 .promise-card:hover{transform:translateY(-4px)}
 .fast-inquiry-box { background: rgba(0, 166, 81, 0.08); border: 1px solid rgba(0, 166, 81, 0.3); border-radius: 16px; padding: 24px; margin: 30px 0; min-height: 380px; } /* إصلاح CLS */
 .fast-inquiry-box input, .fast-inquiry-box select { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 15px; }
+#home .hero-lede{min-height:72px}
+#contact .fast-inquiry-box{min-height:380px}
+#videos .video-grid{min-height:320px}
 /* Ticker Animation CSS Optimization */
 .ticker { overflow: hidden; white-space: nowrap; }
 .ticker-track { display: inline-block; animation: tickerScroll 25s linear infinite; }
