@@ -1,4 +1,3 @@
-// ATS ENG - Optimized Fast Language Toggle + Fixed INP & Performance Suite
 const translations = {
   en: {
     "banner.title": "🤖 ATS DocIntel GenAI - NEW!",
@@ -19,7 +18,8 @@ const translations = {
     "nav.cta": "Start a conversation",
     "hero.eyebrow": "INDUSTRIAL INTELLIGENCE / GLOBAL → GCC",
     "hero.title": "Engineering the systems that keep progress moving.",
-    "hero.lede": "ATS brings engineering, automation, dependable power and generative intelligence into one operating partner for modern industry.",
+    "hero.lede":
+      "ATS brings engineering, automation, dependable power and generative intelligence into one operating partner for modern industry.",
     "hero.primary": "Explore our capabilities",
     "hero.secondary": "See selected work",
     "hero.appButton": "Open ATS DocIntel GenAI",
@@ -34,61 +34,79 @@ const translations = {
     "hero.dataSmall": "PREDICTIVE DATA",
     "hero.dataStrong": "See earlier.",
     "about.kicker": "THE ATS APPROACH",
-    "about.title": "A practical bridge between bold ideas and reliable operations.",
-    "about.lead": "We design and support the infrastructure behind ambitious businesses — from mechanical rooms and cold-chain environments to software, SCADA and the intelligence layer that connects them.",
-    "about.body": "Our approach is clear: understand the operating reality, make the system visible, then improve it with the right mix of engineering discipline and modern technology. The result is less guesswork, better uptime and decisions that stand up in the field.",
+    "about.title":
+      "A practical bridge between bold ideas and reliable operations.",
+    "about.lead":
+      "We design and support the infrastructure behind ambitious businesses — from mechanical rooms and cold-chain environments to software, SCADA and the intelligence layer that connects them.",
+    "about.body":
+      "Our approach is clear: understand the operating reality, make the system visible, then improve it with the right mix of engineering discipline and modern technology. The result is less guesswork, better uptime and decisions that stand up in the field.",
     "about.signature": "Built for the field. Ready for the future.",
     "services.kicker": "WHAT WE DO",
     "services.title": "Capability with a point of view.",
     "services.note": "Integrated thinking across the systems that matter most.",
     "service.engineering.title": "Engineering &<br />technical works",
-    "service.engineering.body": "Mechanical engineering, facilities and project delivery built around real operating conditions.",
+    "service.engineering.body":
+      "Mechanical engineering, facilities and project delivery built around real operating conditions.",
     "service.digital.title": "Programming &<br />information systems",
-    "service.digital.body": "Connected software, automation and SCADA systems that make critical information useful.",
+    "service.digital.body":
+      "Connected software, automation and SCADA systems that make critical information useful.",
     "service.power.title": "Power, diesel &<br />asset management",
-    "service.power.body": "Generators, maintenance strategies and asset decisions that protect continuity.",
+    "service.power.body":
+      "Generators, maintenance strategies and asset decisions that protect continuity.",
     "service.ai.title": "Generative AI &<br />predictive maintenance",
     "service.ai.body": "Turn operational signals into earlier, smarter action.",
     "service.cold.title": "Cold rooms &<br />freezer systems",
-    "service.cold.body": "World-class cold-chain environments featuring Porkka and proven controls.",
+    "service.cold.body":
+      "World-class cold-chain environments featuring Porkka and proven controls.",
     "service.consulting.title": "Advisory &<br />technical consulting",
-    "service.consulting.body": "A senior perspective for complex decisions, investments and operational change.",
+    "service.consulting.body":
+      "A senior perspective for complex decisions, investments and operational change.",
     "services.partners": "TECHNOLOGY & BRAND ECOSYSTEM",
     "promise.kicker": "WHY ATS ENG",
     "promise.title": "From Installation to After-Sales, We Stay With You.",
-    "promise.lead": "ATS ENG was built on field experience, not just sales. We have led installation, commissioning, and after-sales warranty for power and cold-chain systems worldwide and across the GCC.",
+    "promise.lead":
+      "ATS ENG was built on field experience, not just sales. We have led installation, commissioning, and after-sales warranty for power and cold-chain systems worldwide and across the GCC.",
     "promise.card1.num": "01 — INSTALLATION",
     "promise.card1.title": "Installation",
-    "promise.card1.body": "Professional on-site installation to international standards.",
+    "promise.card1.body":
+      "Professional on-site installation to international standards.",
     "promise.card2.num": "02 — COMMISSIONING",
     "promise.card2.title": "Commissioning",
-    "promise.card2.body": "Testing, start-up and 100% working handover in front of you.",
+    "promise.card2.body":
+      "Testing, start-up and 100% working handover in front of you.",
     "promise.card3.num": "03 — WARRANTY & AFTER-SALES",
     "promise.card3.title": "Warranty & After-Sales",
-    "promise.card3.body": "Real warranty, maintenance, spare parts, and fast response when it breaks.",
+    "promise.card3.body":
+      "Real warranty, maintenance, spare parts, and fast response when it breaks.",
     "promise.footer": "When it matters, we are there. — ATS ENG",
     "work.kicker": "SELECTED WORK",
     "work.title": "From concept to continuity.",
     "work.link": "Tell us what you are building",
     "work.item1.type": "POWER SYSTEMS",
     "work.item1.title": "Resilient generation for mission-critical operations.",
-    "work.item1.body": "Generator strategy, installation support and maintenance logic designed around the cost of interruption.",
+    "work.item1.body":
+      "Generator strategy, installation support and maintenance logic designed around the cost of interruption.",
     "work.item2.type": "COLD-CHAIN ENGINEERING",
     "work.item2.title": "Controlled environments with no room for compromise.",
-    "work.item2.body": "Cold rooms and freezer systems specified for stability, traceability and dependable product protection.",
+    "work.item2.body":
+      "Cold rooms and freezer systems specified for stability, traceability and dependable product protection.",
     "work.item3.type": "INTELLIGENT OPERATIONS",
     "work.item3.title": "A clearer signal inside complex systems.",
-    "work.item3.body": "Predictive maintenance concepts that help teams move from reacting to anticipating.",
+    "work.item3.body":
+      "Predictive maintenance concepts that help teams move from reacting to anticipating.",
     "gallery.kicker": "FIELD NOTES",
     "gallery.title": "The work, in the real world.",
-    "gallery.note": "A living archive for installations, equipment and the people who make systems work.",
+    "gallery.note":
+      "A living archive for installations, equipment and the people who make systems work.",
     "gallery.open": "Open image",
     "videos.kicker": "WATCH THE SYSTEM",
     "videos.title": "Ideas are better when they move.",
-    "videos.note": "Add your company films, site tours and technical explainers here.",
+    "videos.note":
+      "Add your company films, site tours and technical explainers here.",
     "contact.kicker": "LET'S MAKE IT WORK",
     "contact.title": "Bring us the complex part.",
-    "contact.lede": "Tell us where the system is today and where it needs to go. We will bring the right people into the room.",
+    "contact.lede":
+      "Tell us where the system is today and where it needs to go. We will bring the right people into the room.",
     "contact.location": "Freedom Street · Khartoum, Sudan & International",
     "contact.hours": "Sunday–Thursday · 8:00 AM–4:00 PM",
     "form.name": "Your name",
@@ -106,11 +124,13 @@ const translations = {
     "footer.top": "Back to top ↑",
     "common.discuss": "Discuss a project",
     "fast.inquiry.title": "⚡ Global Instant Inquiry — Worldwide & GCC",
-    "fast.inquiry.subtitle": "Enter your details below to instantly open WhatsApp with our engineering team (Response within 1 hour):",
+    "fast.inquiry.subtitle":
+      "Enter your details below to instantly open WhatsApp with our engineering team (Response within 1 hour):",
     "fast.placeholder.name": "Your Name / Company Name",
-    "fast.placeholder.city": "Your Country / City (e.g., Dubai, Riyadh, London, Khartoum)",
+    "fast.placeholder.city":
+      "Your Country / City (e.g., Dubai, Riyadh, London, Khartoum)",
     "fast.capacity.select": "Select Required Capacity / Solution",
-    "fast.submit.btn": "Send Inquiry via WhatsApp (1-Hour Response) ↗"
+    "fast.submit.btn": "Send Inquiry via WhatsApp (1-Hour Response) ↗",
   },
   ar: {
     "banner.title": "🤖 ATS DocIntel GenAI - جديد!",
@@ -131,7 +151,8 @@ const translations = {
     "nav.cta": "ابدأ محادثة",
     "hero.eyebrow": "الذكاء الصناعي الهندسي / عالمياً ← الخليج",
     "hero.title": "هندسة الأنظمة التي تبقي عجلة التقدم مستمرة.",
-    "hero.lede": "تقدم ATS الهندسة، الأتمتة، الطاقة المعتمدة، والذكاء التوليدي في شريك تشغيلي واحد للصناعة الحديثة.",
+    "hero.lede":
+      "تقدم ATS الهندسة، الأتمتة، الطاقة المعتمدة، والذكاء التوليدي في شريك تشغيلي واحد للصناعة الحديثة.",
     "hero.primary": "استكشف قدراتنا",
     "hero.secondary": "شاهد أعمالنا المختارة",
     "hero.appButton": "فتح نظام ATS DocIntel GenAI",
@@ -147,28 +168,36 @@ const translations = {
     "hero.dataStrong": "اعرف باكراً.",
     "about.kicker": "نهج ATS",
     "about.title": "جسر عملي بين الأفكار الطموحة والتشغيل الموثوق.",
-    "about.lead": "نقوم بتصميم ودعم البنية التحتية للأعمال الطموحة - من غرف التبريد والطاقة إلى البرمجيات وأنظمة SCADA.",
-    "about.body": "نهجنا واضح: فهم الواقع التشغيلي، جعل النظام مرئياً، ثم تطويره بمزج الانضباط الهندسي والتكنولوجيا الحديثة لضمان استمرارية التشغيل.",
+    "about.lead":
+      "نقوم بتصميم ودعم البنية التحتية للأعمال الطموحة - من غرف التبريد والطاقة إلى البرمجيات وأنظمة SCADA.",
+    "about.body":
+      "نهجنا واضح: فهم الواقع التشغيلي، جعل النظام مرئياً، ثم تطويره بمزج الانضباط الهندسي والتكنولوجيا الحديثة لضمان استمرارية التشغيل.",
     "about.signature": "مصمم للميدان. جاهز للمستقبل.",
     "services.kicker": "ما نقوم به",
     "services.title": "كفاءة برؤية واضحة.",
     "services.note": "تفكير متكامل عبر الأنظمة الأكثر أهمية.",
     "service.engineering.title": "الهندسة والأعمال الفنية",
-    "service.engineering.body": "هندسة ميكانيكية وتجهيز منشآت مصممة وفق ظروف التشغيل الواقعية.",
+    "service.engineering.body":
+      "هندسة ميكانيكية وتجهيز منشآت مصممة وفق ظروف التشغيل الواقعية.",
     "service.digital.title": "البرمجة وأنظمة المعلومات",
-    "service.digital.body": "برمجيات مترابطة، أتمتة وأنظمة SCADA لجعل البيانات الحيوية مفيدة.",
+    "service.digital.body":
+      "برمجيات مترابطة، أتمتة وأنظمة SCADA لجعل البيانات الحيوية مفيدة.",
     "service.power.title": "الطاقة، الديزل وإدارة الأصول",
-    "service.power.body": "مولدات، استراتيجيات صيانة وقرارات أصول تحمي استمرارية العمل.",
+    "service.power.body":
+      "مولدات، استراتيجيات صيانة وقرارات أصول تحمي استمرارية العمل.",
     "service.ai.title": "الذكاء الاصطناعي والتنبؤ",
     "service.ai.body": "تحويل إشارات التشغيل إلى إجراءات أسرع وأكثر ذكاءً.",
     "service.cold.title": "غرف التبريد وأنظمة التجميد",
-    "service.cold.body": "بيئات سلسلة باردة عالمية المستوى تضم منتجات Porkka وتحكم مثالي.",
+    "service.cold.body":
+      "بيئات سلسلة باردة عالمية المستوى تضم منتجات Porkka وتحكم مثالي.",
     "service.consulting.title": "الاستشارات الفنية",
-    "service.consulting.body": "رؤية استشارية خبيرة للقرارات المعقدة والاستثمارات والتطوير التشغيلي.",
+    "service.consulting.body":
+      "رؤية استشارية خبيرة للقرارات المعقدة والاستثمارات والتطوير التشغيلي.",
     "services.partners": "منظومة العلامات التجارية والتقنية",
     "promise.kicker": "لماذا ATS ENG",
     "promise.title": "من التركيب إلى ما بعد البيع، نحن معك دائماً.",
-    "promise.lead": "تأسست ATS ENG على الخبرة الميدانية وليس المبيعات فقط. لقد قمنا بإدارة التركيب التشغيل وضمان ما بعد البيع للطاقة والتبريد عالمياً وفي الخليج.",
+    "promise.lead":
+      "تأسست ATS ENG على الخبرة الميدانية وليس المبيعات فقط. لقد قمنا بإدارة التركيب التشغيل وضمان ما بعد البيع للطاقة والتبريد عالمياً وفي الخليج.",
     "promise.card1.num": "01 — التركيب",
     "promise.card1.title": "التركيب",
     "promise.card1.body": "تركيب احترافي في الموقع وفق المعايير الدولية.",
@@ -177,20 +206,24 @@ const translations = {
     "promise.card2.body": "الفحص، التشغيل والتسليم بنسبة 100% أمام عينيك.",
     "promise.card3.num": "03 — الضمان ودعم ما بعد البيع",
     "promise.card3.title": "الضمان وما بعد البيع",
-    "promise.card3.body": "ضمان حقيقي، صيانة، قطع غيار واستجابة سريعة عند حدوث أعطال.",
+    "promise.card3.body":
+      "ضمان حقيقي، صيانة، قطع غيار واستجابة سريعة عند حدوث أعطال.",
     "promise.footer": "عندما يكون الأمر هاماً، تجدنا بجانبك. — ATS ENG",
     "work.kicker": "أعمال مختارة",
     "work.title": "من الفكرة إلى الاستمرارية.",
     "work.link": "أخبرنا بما تبنيه",
     "work.item1.type": "أنظمة الطاقة",
     "work.item1.title": "توليد طاقة مرن للعمليات الحرجة.",
-    "work.item1.body": "استراتيجية مولدات، دعم تركيب وصيانة مصممة لتجنب التوقف.",
+    "work.item1.body":
+      "استراتيجية مولدات، دعم تركيب وصيانة مصممة لتجنب التوقف.",
     "work.item2.type": "هندسة التبريد",
     "work.item2.title": "بيئات خاضعة للتحكم بدون تنازلات.",
-    "work.item2.body": "غرف تبريد وتجميد مصممة للاستقرار والموثوقية وحماية المنتجات.",
+    "work.item2.body":
+      "غرف تبريد وتجميد مصممة للاستقرار والموثوقية وحماية المنتجات.",
     "work.item3.type": "العمليات الذكية",
     "work.item3.title": "إشارة أكثر وضوحاً داخل الأنظمة المعقدة.",
-    "work.item3.body": "مفاهيم صيانة تنبؤية تساعد الفرق على الانتقال من رد الفعل إلى الاستباق.",
+    "work.item3.body":
+      "مفاهيم صيانة تنبؤية تساعد الفرق على الانتقال من رد الفعل إلى الاستباق.",
     "gallery.kicker": "ملاحظات ميدانية",
     "gallery.title": "العمل في الواقع الحقيقي.",
     "gallery.note": "أرشيف حي للتركيبات والمعدات ومن يصنعون الأنظمة.",
@@ -200,7 +233,8 @@ const translations = {
     "videos.note": "أضف أفلام شركتك والجولات الميدانية والشروحات التقنية هنا.",
     "contact.kicker": "دعنا ننجز العمل",
     "contact.title": "أحضر لنا الجزء المعقد.",
-    "contact.lede": "أخبرنا اين يقف نظامك اليوم وإلى أاين يحتاج أن يصل. سنحضر الأشخاص المناسبين.",
+    "contact.lede":
+      "أخبرنا اين يقف نظامك اليوم وإلى أاين يحتاج أن يصل. سنحضر الأشخاص المناسبين.",
     "contact.location": "شارع الحرية · الخرطوم، السودان ودولي",
     "contact.hours": "الأحد - الخميس · 8:00 صباحاً - 4:00 عصراً",
     "form.name": "اسمك",
@@ -217,75 +251,126 @@ const translations = {
     "footer.rights": "مصمم للميدان.",
     "footer.top": "العودة للأعلى ↑",
     "common.discuss": "ناقش مشروعاً",
-    "fast.inquiry.title": "⚡ استفسار فوري عالمي - من جميع أنحاء العالم & الخليج",
-    "fast.inquiry.subtitle": "أدخل بياناتك لفتح واتساب مباشرة مع الفريق الهندسي (رد خلال ساعة):",
+    "fast.inquiry.title":
+      "⚡ استفسار فوري عالمي - من جميع أنحاء العالم & الخليج",
+    "fast.inquiry.subtitle":
+      "أدخل بياناتك لفتح واتساب مباشرة مع الفريق الهندسي (رد خلال ساعة):",
     "fast.placeholder.name": "اسم العميل / الشركة",
-    "fast.placeholder.city": "دولتك / مدينتك (مثال: دبي، الرياض، لندن، الخرطوم)",
+    "fast.placeholder.city":
+      "دولتك / مدينتك (مثال: دبي، الرياض، لندن، الخرطوم)",
     "fast.capacity.select": "اختر القدرة / الحل المطلوب",
-    "fast.submit.btn": "إرسال الطلب عبر واتساب (رد خلال ساعة) ↗"
-  }
+    "fast.submit.btn": "إرسال الطلب عبر واتساب (رد خلال ساعة) ↗",
+  },
 };
 
-// Cache elements once to optimize INP performance
+// ===== ATS - FIXED INP v3 - Instant Toggle + Chunked Translation =====
+// Cache translated nodes once. If this page adds translated nodes dynamically,
+// invalidate the cache (cachedNodes = null) after inserting them.
 let cachedNodes = null;
 function getCachedNodes() {
   if (!cachedNodes) {
-    cachedNodes = Array.from(document.querySelectorAll('[data-i18n]'));
+    cachedNodes = Array.from(document.querySelectorAll("[data-i18n]"));
   }
   return cachedNodes;
 }
 
-function setLanguage(lang) {
-  const html = document.documentElement;
-  requestAnimationFrame(() => {
-    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-    html.setAttribute('lang', lang);
-    
-    const toggleBtn = document.getElementById('langToggle');
-    if (toggleBtn) {
-      toggleBtn.textContent = lang === 'ar' ? 'English' : 'عربي';
-    }
-    
-    const dict = translations[lang] || {};
-    getCachedNodes().forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (dict[key]) {
-        el.innerHTML = dict[key];
-      }
-    });
+let isSwitching = false;
+let pendingLang = null;
 
-    // Translate placeholders securely
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-      const key = el.getAttribute('data-i18n-placeholder');
-      if (dict[key]) {
-        el.setAttribute('placeholder', dict[key]);
-      }
+function applyChunk(nodes, dict, start, lang) {
+  const end = Math.min(start + 15, nodes.length);
+  for (let i = start; i < end; i++) {
+    const el = nodes[i];
+    const value = dict[el.dataset.i18n];
+    if (typeof value !== "string") continue;
+
+    // Preserve intentional markup in translations (currently <br /> entries).
+    if (value.includes("<")) {
+      if (el.innerHTML !== value) el.innerHTML = value;
+    } else if (el.textContent !== value) {
+      el.textContent = value;
+    }
+  }
+
+  if (end < nodes.length) {
+    requestAnimationFrame(() => applyChunk(nodes, dict, end, lang));
+    return;
+  }
+
+  isSwitching = false;
+  document.documentElement.classList.remove("lang-switching");
+  if (pendingLang && pendingLang !== lang) {
+    const nextLang = pendingLang;
+    pendingLang = null;
+    setLanguage(nextLang);
+  } else {
+    pendingLang = null;
+  }
+}
+
+function setLanguage(lang) {
+  if (lang !== "ar" && lang !== "en") return;
+  if (isSwitching) {
+    pendingLang = lang;
+    return;
+  }
+  isSwitching = true;
+
+  const html = document.documentElement;
+  const toggleBtn = document.getElementById("langToggle");
+
+  // Give immediate feedback before performing the chunked content updates.
+  if (toggleBtn) toggleBtn.textContent = lang === "ar" ? "English" : "عربي";
+  html.setAttribute("lang", lang);
+  html.classList.add("lang-switching");
+
+  requestAnimationFrame(() => {
+    html.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+    const dict = translations[lang] || {};
+    const nodes = getCachedNodes();
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      const value = dict[el.dataset.i18nPlaceholder];
+      if (typeof value === "string") el.setAttribute("placeholder", value);
     });
 
     try {
-      localStorage.setItem('ats_lang', lang);
-    } catch(e) {}
+      localStorage.setItem("ats_lang", lang);
+    } catch (error) {}
+    requestAnimationFrame(() => applyChunk(nodes, dict, 0, lang));
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('ats_lang') || 'en';
-  if (savedLang === 'ar') {
-    setLanguage('ar');
+document.addEventListener("DOMContentLoaded", () => {
+  let savedLang = "en";
+  try {
+    savedLang = localStorage.getItem("ats_lang") || "en";
+  } catch (error) {}
+
+  if (savedLang === "ar") {
+    document.documentElement.setAttribute("lang", "ar");
+    document.documentElement.setAttribute("dir", "rtl");
+    const button = document.getElementById("langToggle");
+    if (button) button.textContent = "English";
+    if (typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(() => setLanguage("ar"));
+    } else {
+      window.setTimeout(() => setLanguage("ar"), 100);
+    }
   }
 
-  const langToggle = document.getElementById('langToggle');
+  const langToggle = document.getElementById("langToggle");
   if (langToggle) {
-    langToggle.addEventListener('click', () => {
-      const currentLang = document.documentElement.getAttribute('lang') || 'en';
-      setLanguage(currentLang === 'ar' ? 'en' : 'ar');
-    }, { passive: true });
+    langToggle.addEventListener("click", () => {
+      const currentLang = document.documentElement.getAttribute("lang") || "en";
+      setLanguage(currentLang === "ar" ? "en" : "ar");
+    });
   }
 
-  const menuToggle = document.getElementById('menuToggle');
+  const menuToggle = document.getElementById("menuToggle");
   if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-      document.body.classList.toggle('menu-open');
-    }, { passive: true });
+    menuToggle.addEventListener("click", () => {
+      document.body.classList.toggle("menu-open");
+    });
   }
 });
