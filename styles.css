@@ -120,3 +120,9 @@ body[dir=rtl] .desktop-nav,body[dir=rtl] .header-actions{direction:rtl}body[dir=
   will-change: transform;
   transform: translateZ(0);
 }
+
+/* تعطيل الانتقالات والأنيميشن مؤقتًا أثناء تبديل اللغة */
+html.lang-switching * {
+  transition: none !important;
+  animation: none !important;
+}
